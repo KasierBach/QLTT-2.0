@@ -2295,32 +2295,20 @@ function toggleChat() {
   }
 }
 
-let chatMessagesArray = [];
+function sendMessage() {
+  const message = chatInputField.value.trim()
+  if (!message) return
 
-async function sendMessage() {
-  const message = chatInputField.value.trim();
-  if (!message) return;
+  // Add user message
+  addChatMessage(message, "user")
+  chatInputField.value = ""
 
-  // Add user message to chat and messages array
-  addChatMessage(message, "user");
-  chatMessagesArray.push({ role: "user", content: message });
-  chatInputField.value = "";
-
-  try {
-    const response = await fetch('/chat', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ messages: chatMessagesArray })
-    });
-
-    if (!response.ok) {
-      throw new Error('Lỗi từ server');
-    }
-
-    const data = await response.json();
-
+  // Simulate bot response
+  setTimeout(() => {
+    const botResponse = getBotResponse(message)
+    addChatMessage(botResponse, "bot")
+  }, 1000)
+}
 
 function addChatMessage(message, sender) {
   const messageDiv = document.createElement("div")
