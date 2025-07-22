@@ -2857,9 +2857,11 @@ body {
   flex: 1;
   padding: 1rem;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .message {
