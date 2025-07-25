@@ -458,6 +458,27 @@ const compareProducts = document.getElementById("compare-products")
 // Initialize the app
 document.addEventListener("DOMContentLoaded", () => {
   initializeApp()
+
+  // Add event listeners for user account modal tabs
+  const tabProfileBtn = document.getElementById('tab-profile-btn')
+  const tabOrdersBtn = document.getElementById('tab-orders-btn')
+  const tabSettingsBtn = document.getElementById('tab-settings-btn')
+
+  if (tabProfileBtn) {
+    tabProfileBtn.addEventListener('click', () => {
+      showUserAccountTab('profile')
+    })
+  }
+  if (tabOrdersBtn) {
+    tabOrdersBtn.addEventListener('click', () => {
+      showUserAccountTab('orders')
+    })
+  }
+  if (tabSettingsBtn) {
+    tabSettingsBtn.addEventListener('click', () => {
+      showUserAccountTab('settings')
+    })
+  }
 })
 
 function initializeApp() {
@@ -1854,12 +1875,14 @@ function buyNow(productId) {
   proceedToCheckout()
 }
 
-function showDetailTab(tabName) {
+function showDetailTab(tabName, event) {
   // Update active tab button
   document.querySelectorAll(".tab-btn").forEach((btn) => {
     btn.classList.remove("active")
   })
-  event.target.classList.add("active")
+  if (event && event.target) {
+    event.target.classList.add("active")
+  }
 
   // Show corresponding tab content
   document.querySelectorAll(".tab-content").forEach((content) => {
@@ -2457,30 +2480,362 @@ function handleContactForm(e) {
 
 // Additional Features
 function showProfile() {
-  alert("Tính năng hồ sơ người dùng đang được phát triển!")
+  showUserAccountModal()
+  showUserAccountTab('profile')
+  loadUserProfile()
 }
 
 function showOrderHistory() {
-  const userOrders = orders.filter((order) => order.userId === currentUser?.id)
-
-  if (userOrders.length === 0) {
-    alert("Bạn chưa có đơn hàng nào.")
-    return
-  }
-
-  let orderHistory = "Lịch sử đơn hàng:\n\n"
-  userOrders.forEach((order) => {
-    orderHistory += `Mã: ${order.id}\n`
-    orderHistory += `Ngày: ${formatDate(order.date)}\n`
-    orderHistory += `Tổng tiền: ${formatPrice(order.total)}\n`
-    orderHistory += `Trạng thái: ${order.status === "pending" ? "Đang xử lý" : "Hoàn thành"}\n\n`
-  })
-
-  alert(orderHistory)
+  showUserAccountModal()
+  showUserAccountTab('orders')
+  loadUserOrderHistory()
 }
 
 function showSettings() {
-  alert("Tính năng cài đặt đang được phát triển!")
+  showUserAccountModal()
+  showUserAccountTab('settings')
+  loadUserSettings()
+}
+
+// Show user account modal
+function showUserAccountModal() {
+  const modal = document.getElementById('user-account-modal')
+  if (modal) {
+    modal.style.display = 'block'
+    document.body.style.overflow = 'hidden'
+  }
+}
+
+// Close user account modal
+function closeUserAccountModal() {
+  const modal = document.getElementById('user-account-modal')
+  if (modal) {
+    modal.style.display = 'none'
+    document.body.style.overflow = 'auto'
+  }
+}
+
+// Switch tabs inside user account modal
+function showUserAccountTab(tabName) {
+  const tabs = ['profile', 'orders', 'settings']
+  tabs.forEach((tab) => {
+    const btn = document.getElementById(`tab-${tab}-btn`)
+    const content = document.getElementById(`user-${tab}-tab`)
+    if (btn && content) {
+      if (tab === tabName) {
+        btn.classList.add('active')
+        content.classList.add('active')
+      } else {
+        btn.classList.remove('active')
+        content.classList.remove('active')
+      }
+    }
+  })
+}
+
+// Load user profile content
+function loadUserProfile() {
+  const profileTab = document.getElementById('user-profile-tab')
+  if (!profileTab) return
+
+  if (!currentUser) {
+    profileTab.innerHTML = '<p>Vui lòng đăng nhập để xem hồ sơ.</p>'
+    return
+  }
+
+  profileTab.innerHTML = `
+    <form id="profile-form" class="profile-info">
+      <label for="fullName">Họ và tên</label>
+      <input type="text" id="fullName" name="fullName" value="${currentUser.fullName || ''}" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" value="${currentUser.email || ''}" required disabled>
+
+      <label for="phone">Số điện thoại</label>
+      <input type="tel" id="phone" name="phone" value="${currentUser.phone || ''}" required>
+
+      <label for="address">Địa chỉ</label>
+      <textarea id="address" name="address" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"></textarea>
+
+      <div class="profile-buttons">
+        <button type="submit" class="save-btn">Lưu</button>
+        <button type="button" class="cancel-btn" onclick="showProfile()">Hủy</button>
+      </div>
+    </form>
+  `
+
+  const profileForm = document.getElementById('profile-form')
+  profileForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    saveUserProfile()
+  })
+}
+
+// Save user profile changes
+function saveUserProfile() {
+  const fullNameInput = document.getElementById('fullName')
+  const phoneInput = document.getElementById('phone')
+  const addressInput = document.getElementById('address')
+
+  if (!fullNameInput || !phoneInput || !addressInput) return
+
+  currentUser.fullName = fullNameInput.value.trim()
+  currentUser.phone = phoneInput.value.trim()
+  currentUser.address = addressInput.value.trim()
+
+  // Update localStorage and UI
+  localStorage.setItem('currentUser', JSON.stringify(currentUser))
+  const userIndex = users.findIndex((u) => u.id === currentUser.id)
+  if (userIndex > -1) {
+    users[userIndex] = currentUser
+    localStorage.setItem('users', JSON.stringify(users))
+  }
+
+  updateUserUI()
+  showNotification('Cập nhật hồ sơ thành công!', 'success')
+}
+
+// Load user order history content
+function loadUserOrderHistory() {
+  const ordersTab = document.getElementById('user-orders-tab')
+  if (!ordersTab) return
+
+  if (!currentUser) {
+    ordersTab.innerHTML = '<p>Vui lòng đăng nhập để xem lịch sử đơn hàng.</p>'
+    return
+  }
+
+  const userOrders = orders.filter((order) => order.userId === currentUser.id)
+
+  if (userOrders.length === 0) {
+    ordersTab.innerHTML = '<p>Bạn chưa có đơn hàng nào.</p>'
+    return
+  }
+
+  // Helper function to get status label and color
+  function getStatusInfo(status) {
+    switch (status) {
+      case 'pending':
+        return { label: 'Đang xử lý', color: 'var(--warning-color)' }
+      case 'shipped':
+        return { label: 'Đang giao hàng', color: 'var(--primary-color)' }
+      case 'delivered':
+        return { label: 'Đã giao hàng', color: 'var(--success-color)' }
+      case 'cancelled':
+        return { label: 'Đã hủy', color: 'var(--accent-color)' }
+      default:
+        return { label: status, color: 'var(--text-secondary)' }
+    }
+  }
+
+  let html = '<ul class="order-history-list">'
+  userOrders.forEach((order) => {
+    const statusInfo = getStatusInfo(order.status)
+    html += `
+      <li>
+        <div class="order-id">Mã đơn hàng: ${order.id}</div>
+        <div class="order-date">Ngày: ${formatDate(order.date)}</div>
+        <div class="order-total">Tổng tiền: ${formatPrice(order.total)}</div>
+        <div class="order-status" style="color: ${statusInfo.color}; font-weight: 600;">
+          Trạng thái: ${statusInfo.label}
+        </div>
+        <div class="order-actions">
+          ${
+            order.status !== 'cancelled' && order.status !== 'delivered'
+              ? `<button class="cancel-order-btn" onclick="cancelOrder('${order.id}')">Hủy đơn hàng</button>`
+              : ''
+          }
+          <button class="track-order-btn" onclick="viewOrderTracking('${order.id}')">Xem tiến trình</button>
+        </div>
+      </li>
+    `
+  })
+  html += '</ul>'
+
+  ordersTab.innerHTML = html
+}
+
+// Cancel order function
+function cancelOrder(orderId) {
+  if (!confirm('Bạn có chắc chắn muốn hủy đơn hàng này?')) return
+
+  const orderIndex = orders.findIndex((order) => order.id === orderId && order.userId === currentUser.id)
+  if (orderIndex === -1) {
+    showNotification('Không tìm thấy đơn hàng để hủy.', 'error')
+    return
+  }
+
+  if (orders[orderIndex].status === 'delivered' || orders[orderIndex].status === 'cancelled') {
+    showNotification('Đơn hàng không thể hủy.', 'warning')
+    return
+  }
+
+  orders[orderIndex].status = 'cancelled'
+  localStorage.setItem('orders', JSON.stringify(orders))
+  showNotification('Đơn hàng đã được hủy thành công.', 'success')
+  loadUserOrderHistory()
+}
+
+// View order tracking function
+function viewOrderTracking(orderId) {
+  const order = orders.find((order) => order.id === orderId && order.userId === currentUser.id)
+  if (!order) {
+    showNotification('Không tìm thấy đơn hàng.', 'error')
+    return
+  }
+
+  // Simple tracking steps based on status
+  const steps = [
+    { key: 'pending', label: 'Đang xử lý' },
+    { key: 'shipped', label: 'Đang giao hàng' },
+    { key: 'delivered', label: 'Đã giao hàng' },
+  ]
+
+  let currentStepIndex = steps.findIndex((step) => step.key === order.status)
+  if (currentStepIndex === -1) currentStepIndex = 0
+
+  // Simulated delivery tracking data
+  const deliveryInfo = {
+    departure: "Kho trung tâm TP.HCM",
+    currentLocation: "Quận 3, TP.HCM",
+    destination: "Quận 1, TP.HCM",
+    deliveryPerson: {
+      name: "Nguyễn Văn Tài",
+      phone: "0123 456 789",
+      vehicle: "Xe máy số 123-45",
+      avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    route: [
+      "Kho trung tâm TP.HCM",
+      "Quận 3, TP.HCM",
+      "Quận 1, TP.HCM"
+    ]
+  }
+
+  let trackingHtml = `
+    <div class="order-tracking-modal">
+      <h3>Tiến trình đơn hàng: ${order.id}</h3>
+      <div class="delivery-map-placeholder">
+        <p>Bản đồ theo dõi giao hàng (chưa tích hợp bản đồ thực tế)</p>
+      </div>
+      <ul class="tracking-steps">
+  `
+
+  steps.forEach((step, index) => {
+    const isActive = index <= currentStepIndex
+    trackingHtml += `
+      <li class="tracking-step ${isActive ? 'active' : ''}">
+        <span class="step-label">${step.label}</span>
+        ${isActive ? '<i class="fas fa-check-circle"></i>' : '<i class="far fa-circle"></i>'}
+      </li>
+    `
+  })
+
+  trackingHtml += `
+      </ul>
+      <div class="delivery-info">
+        <h4>Thông tin người giao hàng</h4>
+        <div class="delivery-person">
+          <img src="${deliveryInfo.deliveryPerson.avatar}" alt="Avatar người giao hàng" class="delivery-avatar">
+          <div class="delivery-details">
+            <p><strong>Tên:</strong> ${deliveryInfo.deliveryPerson.name}</p>
+            <p><strong>Điện thoại:</strong> ${deliveryInfo.deliveryPerson.phone}</p>
+            <p><strong>Phương tiện:</strong> ${deliveryInfo.deliveryPerson.vehicle}</p>
+          </div>
+        </div>
+        <h4>Hành trình giao hàng</h4>
+        <ol class="delivery-route">
+          ${deliveryInfo.route.map((location) => `<li>${location}</li>`).join('')}
+        </ol>
+        <p><strong>Vị trí hiện tại:</strong> ${deliveryInfo.currentLocation}</p>
+      </div>
+      <button onclick="closeOrderTrackingModal()">Đóng</button>
+    </div>
+  `
+
+  // Create modal container if not exists
+  let modal = document.getElementById('order-tracking-modal')
+  if (!modal) {
+    modal = document.createElement('div')
+    modal.id = 'order-tracking-modal'
+    modal.className = 'modal'
+    document.body.appendChild(modal)
+  }
+
+  modal.innerHTML = `
+    <div class="modal-content order-tracking-modal-content">
+      <span class="close-modal" onclick="closeOrderTrackingModal()">&times;</span>
+      ${trackingHtml}
+    </div>
+  `
+  modal.style.display = 'block'
+  document.body.style.overflow = 'hidden'
+}
+
+function closeOrderTrackingModal() {
+  const modal = document.getElementById('order-tracking-modal')
+  if (modal) {
+    modal.style.display = 'none'
+    document.body.style.overflow = 'auto'
+  }
+}
+
+// Load user settings content
+function loadUserSettings() {
+  const settingsTab = document.getElementById('user-settings-tab')
+  if (!settingsTab) return
+
+  if (!currentUser) {
+    settingsTab.innerHTML = '<p>Vui lòng đăng nhập để xem cài đặt.</p>'
+    return
+  }
+
+  // Example settings - can be expanded
+  settingsTab.innerHTML = `
+    <div class="settings-content">
+      <div class="settings-item">
+        <label for="emailNotifications">Nhận thông báo qua email</label>
+        <input type="checkbox" id="emailNotifications" ${currentUser.emailNotifications ? 'checked' : ''}>
+      </div>
+      <div class="settings-item">
+        <label for="smsNotifications">Nhận thông báo qua SMS</label>
+        <input type="checkbox" id="smsNotifications" ${currentUser.smsNotifications ? 'checked' : ''}>
+      </div>
+      <div class="settings-item">
+        <label for="darkModeSetting">Chế độ tối</label>
+        <input type="checkbox" id="darkModeSetting" ${currentTheme === 'dark' ? 'checked' : ''}>
+      </div>
+      <div class="profile-buttons">
+        <button type="button" class="save-btn" onclick="saveUserSettings()">Lưu cài đặt</button>
+      </div>
+    </div>
+  `
+
+  // Add event listeners for checkboxes if needed
+}
+
+// Save user settings changes
+function saveUserSettings() {
+  const emailNotifications = document.getElementById('emailNotifications')?.checked || false
+  const smsNotifications = document.getElementById('smsNotifications')?.checked || false
+  const darkModeSetting = document.getElementById('darkModeSetting')?.checked || false
+
+  if (!currentUser) return
+
+  currentUser.emailNotifications = emailNotifications
+  currentUser.smsNotifications = smsNotifications
+  localStorage.setItem('currentUser', JSON.stringify(currentUser))
+
+  // Save settings in localStorage or apply immediately
+  if (darkModeSetting) {
+    applyTheme('dark')
+    localStorage.setItem('theme', 'dark')
+  } else {
+    applyTheme('light')
+    localStorage.setItem('theme', 'light')
+  }
+
+  showNotification('Cài đặt đã được lưu!', 'success')
 }
 
 function showForgotPassword() {

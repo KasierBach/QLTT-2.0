@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tin tức công nghệ - TechStore</title>
+    <link rel="icon" href="https://i.pinimg.com/originals/bc/56/f3/bc56f3856f7cc17e6c151f358d35acd0.jpg"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2><i class="fas fa-laptop"></i> TechStore</h2>
+                </div>
+
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html#home" class="nav-link">Trang chủ</a>
+                    <a href="index.html#products" class="nav-link">Sản phẩm</a>
+                    <a href="index.html#deals" class="nav-link">Khuyến mãi</a>
+                    <a href="index.html#about" class="nav-link">Giới thiệu</a>
+                    <a href="index.html#contact" class="nav-link">Liên hệ</a>
+                    <a href="news.html" class="nav-link active">Tin tức công nghệ</a>
+                </div>
+
+                <div class="nav-icons">
+                    <div class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- News Section -->
+    <section class="products-section" style="padding-top: 120px; min-height: 80vh;">
+        <div class="container">
+            <h2 class="section-title">Tin tức công nghệ mới nhất</h2>
+            <div class="news-list">
+                <article class="news-item">
+                    <div class="news-image">
+                        <img src="https://www.apple.com/newsroom/images/2023/10/apple-unveils-new-macbook-pro-featuring-m3-chips/article/Apple-MacBook-Pro-2up-231030_Full-Bleed-Image.jpg.xlarge_2x.jpg"
+                            alt="MacBook Pro M3" />
+                    </div>
+                    <div class="news-content">
+                        <h3>Apple ra mắt MacBook Pro M3 với hiệu năng vượt trội</h3>
+                        <p>Apple vừa giới thiệu MacBook Pro M3 với chip M3 thế hệ mới, mang lại hiệu năng mạnh mẽ và
+                            thời lượng pin ấn tượng. Sản phẩm hứa hẹn sẽ là lựa chọn hàng đầu cho các chuyên gia sáng
+                            tạo.</p>
+                        <a href="https://www.apple.com/vn/newsroom/2023/10/apple-unveils-new-macbook-pro-featuring-m3-chips/"
+                            target="_blank" rel="noopener noreferrer">Đọc thêm</a>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-image">
+                        <img src="https://images.samsung.com/is/image/samsung/assets/us/explore/05022024/01/01_HeroKV_DT.jpg?$1440_N_JPG$"
+                            alt="Samsung Galaxy S24 Ultra" />
+                    </div>
+                    <div class="news-content">
+                        <h3>Samsung Galaxy S24 Ultra tích hợp camera zoom 100x và cảm biến chính 200MP</h3>
+                        <p>Việc camera trên S24 Ultra vẫn có thể cung cấp khả năng zoom kỹ thuật số 100x ngay cả với cấu
+                            hình camera mới không phải là điều quá ngạc nhiên. Như người cung cấp thông tin @RGcloudS đã
+                            đăng tải trên X, zoom quang 4x của Galaxy S20 Ultra cho phép điện thoại chụp ảnh với zoom kỹ
+                            thuật số 100x giống như P60 Pro mới của Huawei mặc dù chỉ cung cấp zoom quang 3,5 lần. Một
+                            lần nữa, phần lớn đều phụ thuộc vào phần mềm được sử dụng trên điện thoại.</p>
+                        <a href="https://hoanghamobile.com/tin-tuc/camera-galaxy-s24-ultra/?srsltid=AfmBOoqavKkC03eWMbf6ODLPaNii1GBUkW4RtTtvnMiRAx1xdJaQkvLX"
+                            target="_blank" rel="noopener noreferrer">Đọc thêm</a>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-image">
+                        <img src="https://askany.com/_next/image?url=https%3A%2F%2Fd2czqxs5dso3qv.cloudfront.net%2Fimages%2F2f6845e7-f86d-47f5-8a49-38dee75a8974.jpg&w=1920&q=75"
+                            alt="Xu hướng công nghệ 2025" />
+                    </div>
+                    <div class="news-content">
+                        <h3>Xu hướng công nghệ 2025: AI và IoT phát triển mạnh mẽ</h3>
+                        <p>Năm 2025 được dự báo là thời điểm mang lại nhiều bước tiến đột phá, định hình lại cách con
+                            người sống, làm việc và tương tác với thế giới xung quanh. Từ trí tuệ nhân tạo đến sự kết
+                            nối chặt chẽ của Internet vạn vật (IoT), những xu hướng này ẩn chứa tiềm năng lớn trong việc
+                            cách mạng hóa nhiều ngành nghề và nâng cao chất lượng cuộc sống tổng thể của con người.</p>
+                        <a href="https://kinhtedothi.vn/10-xu-huong-cong-nghe-dinh-hinh-thap-ky-cua-nam-2025.html"
+                            target="_blank" rel="noopener noreferrer">Đọc thêm</a>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-image">
+                        <img src="https://static2-images.vnncdn.net/files/publish/2022/11/2/dscf0033-fotor-359.jpg?width=0&s=JtGxrEVpDLwmYA-mS7nZsA"
+                            alt="AirPods Pro 2" />
+                    </div>
+                    <div class="news-content">
+                        <h3>Review nhanh AirPods Pro 2</h3>
+                        <p>Rất nhiều người dùng hệ sinh thái Apple sẽ nghĩ đến AirPods Pro 2 như lựa chọn đầu tiên khi
+                            muốn mua tai nghe chống ồn.</p>
+                        <p>Apple vừa mở bán chính thức chiếc tai nghe AirPods Pro thế hệ 2 tại thị trường Việt Nam với
+                            giá 6,99 triệu đồng. Tai nghe này có rất nhiều đối thủ đến từ Huawei, Jabra, Sony, Bose,
+                            Sennheiser,... song nó chắc chắn là lựa chọn tốt nhất cho những ai đang dùng các sản phẩm
+                            khác của Apple.</p>
+                        <a href="https://vietnamnet.vn/review-nhanh-airpods-pro-2-tai-nghe-chong-on-tot-nhat-cho-he-sinh-thai-apple-i5005573.html"
+                            target="_blank" rel="noopener noreferrer">Đọc
+                            thêm</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 3rem;">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-laptop"></i> TechStore</h3>
+                    <p>Cửa hàng công nghệ hàng đầu Việt Nam. Nơi hội tụ những món hàng nó cực kì oách xà lách mà bạn
+                        không bao giờ mua được.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Sản phẩm</h4>
+                    <ul>
+                        <li><a href="index.html#products">Laptop</a></li>
+                        <li><a href="index.html#products">Điện thoại</a></li>
+                        <li><a href="index.html#products">Phụ kiện</a></li>
+                        <li><a href="index.html#products">Máy tính bảng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 69 Đường Gì Đó, Phường Sài Gòn, TP.HCM</li>
+                        <li><i class="fas fa-phone"></i> 0123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> siuucongnghe@techstore.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Apply theme toggle functionality on this page as well
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentTheme = localStorage.getItem("theme") || "light";
+            document.documentElement.setAttribute("data-theme", currentTheme);
+            const icon = document.getElementById("theme-icon");
+            if (icon) {
+                icon.className = currentTheme === "light" ? "fas fa-moon" : "fas fa-sun";
+            }
+        });
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+            const icon = document.getElementById("theme-icon");
+            if (icon) {
+                icon.className = newTheme === "light" ? "fas fa-moon" : "fas fa-sun";
+            }
+        }
+    </script>
+</body>
+
+</html>
