@@ -408,7 +408,7 @@ let wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
 let compareList = JSON.parse(localStorage.getItem("compareList")) || []
 let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null
 const users = JSON.parse(localStorage.getItem("users")) || []
-const orders = JSON.parse(localStorage.getItem("orders")) || []
+let orders = JSON.parse(localStorage.getItem("orders")) || []
 let currentTheme = localStorage.getItem("theme") || "light"
 let currentView = "grid"
 let currentFilter = "all"
@@ -2087,8 +2087,9 @@ function showCheckoutStep(step) {
                     </div>
                     <div class="form-group">
                         <label>Địa chỉ *</label>
-                        <textarea name="address" rows="3" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố" required></textarea>
+                        <textarea id="address-textarea" name="address" rows="3" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố" required></textarea>
                     </div>
+                    <div id="checkout-map" style="height: 300px; border: 1px solid var(--border-color); border-radius: var(--border-radius); margin-bottom: 1rem;"></div>
                     <div class="form-group">
                         <label>Ghi chú đơn hàng</label>
                         <textarea name="notes" rows="2" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
@@ -2099,6 +2100,7 @@ function showCheckoutStep(step) {
                     <button type="button" class="checkout-next" onclick="showCheckoutStep(2)">Tiếp tục</button>
                 </div>
             `
+      initializeCheckoutMap()
       break
 
     case 2:
@@ -2251,6 +2253,10 @@ function showCheckoutStep(step) {
 function completeOrder() {
   showLoading()
 
+  // Get delivery address from checkout form
+  const addressTextarea = document.querySelector('#checkout-form textarea[name="address"]')
+  const deliveryAddress = addressTextarea ? addressTextarea.value.trim() : ""
+
   // Simulate order processing
   setTimeout(() => {
     const orderId = "DH" + Date.now()
@@ -2274,6 +2280,7 @@ function completeOrder() {
       status: "pending",
       date: new Date().toISOString(),
       appliedCoupon: appliedCoupon ? appliedCoupon.description : null,
+      deliveryAddress: deliveryAddress, // Save delivery address
     }
 
     orders.push(order)
@@ -2318,6 +2325,49 @@ function toggleChat() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Existing DOMContentLoaded code...
+  initializeApp()
+
+  // Attach scroll event listener to chatMessages here to ensure element exists
+  const chatMessagesEl = document.getElementById("chat-messages")
+  if (chatMessagesEl) {
+    chatMessagesEl.addEventListener('wheel', function(e) {
+      const delta = e.deltaY
+      const up = delta < 0
+      const down = delta > 0
+
+      const atTop = chatMessagesEl.scrollTop === 0
+      const atBottom = chatMessagesEl.scrollHeight - chatMessagesEl.clientHeight === chatMessagesEl.scrollTop
+
+      if ((up && atTop) || (down && atBottom)) {
+        e.preventDefault()
+      }
+    })
+  }
+
+  // Add event listeners for user account modal tabs
+  const tabProfileBtn = document.getElementById('tab-profile-btn')
+  const tabOrdersBtn = document.getElementById('tab-orders-btn')
+  const tabSettingsBtn = document.getElementById('tab-settings-btn')
+
+  if (tabProfileBtn) {
+    tabProfileBtn.addEventListener('click', () => {
+      showUserAccountTab('profile')
+    })
+  }
+  if (tabOrdersBtn) {
+    tabOrdersBtn.addEventListener('click', () => {
+      showUserAccountTab('orders')
+    })
+  }
+  if (tabSettingsBtn) {
+    tabSettingsBtn.addEventListener('click', () => {
+      showUserAccountTab('settings')
+    })
+  }
+})
+
 function sendMessage() {
   const message = chatInputField.value.trim()
   if (!message) return
@@ -2330,7 +2380,14 @@ function sendMessage() {
   setTimeout(() => {
     const botResponse = getBotResponse(message)
     addChatMessage(botResponse, "bot")
+
+    // Re-enable input after bot response
+    chatInputField.disabled = false
+    chatInputField.focus()
   }, 1000)
+
+  // Disable input while waiting for bot response
+  chatInputField.disabled = true
 }
 
 function addChatMessage(message, sender) {
@@ -2628,11 +2685,17 @@ function loadUserOrderHistory() {
     }
   }
 
-  let html = '<ul class="order-history-list">'
+  let html = `
+    <button onclick="deleteSelectedOrders()" style="margin-bottom: 1rem; padding: 0.5rem 1rem; background: var(--accent-color); color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Xóa đơn hàng đã chọn
+    </button>
+    <ul class="order-history-list">
+  `
   userOrders.forEach((order) => {
     const statusInfo = getStatusInfo(order.status)
     html += `
       <li>
+        <input type="checkbox" class="order-select-checkbox" data-order-id="${order.id}" style="margin-right: 0.5rem;">
         <div class="order-id">Mã đơn hàng: ${order.id}</div>
         <div class="order-date">Ngày: ${formatDate(order.date)}</div>
         <div class="order-total">Tổng tiền: ${formatPrice(order.total)}</div>
@@ -2646,6 +2709,9 @@ function loadUserOrderHistory() {
               : ''
           }
           <button class="track-order-btn" onclick="viewOrderTracking('${order.id}')">Xem tiến trình</button>
+          <button class="delete-order-btn" onclick="deleteOrder('${order.id}')" style="background: var(--accent-color); color: white; border: none; border-radius: 5px; margin-left: 0.5rem; cursor: pointer;">
+            Xóa
+          </button>
         </div>
       </li>
     `
@@ -2653,6 +2719,36 @@ function loadUserOrderHistory() {
   html += '</ul>'
 
   ordersTab.innerHTML = html
+}
+
+// Delete single order
+function deleteOrder(orderId) {
+  if (!confirm('Bạn có chắc chắn muốn xóa đơn hàng này?')) return
+
+  orders = orders.filter((order) => order.id !== orderId || order.userId !== currentUser.id)
+  localStorage.setItem('orders', JSON.stringify(orders))
+  loadUserOrderHistory()
+  showNotification('Đơn hàng đã được xóa thành công.', 'success')
+}
+
+function deleteSelectedOrders() {
+  console.log("deleteSelectedOrders called")
+  const checkboxes = document.querySelectorAll('.order-select-checkbox:checked')
+  console.log("Selected checkboxes:", checkboxes)
+  if (checkboxes.length === 0) {
+    alert('Vui lòng chọn ít nhất một đơn hàng để xóa.')
+    return
+  }
+
+  if (!confirm(`Bạn có chắc chắn muốn xóa ${checkboxes.length} đơn hàng đã chọn?`)) return
+
+  const idsToDelete = Array.from(checkboxes).map((cb) => cb.getAttribute('data-order-id'))
+  console.log("IDs to delete:", idsToDelete)
+
+  orders = orders.filter((order) => !idsToDelete.includes(order.id) || order.userId !== currentUser.id)
+  localStorage.setItem('orders', JSON.stringify(orders))
+  loadUserOrderHistory()
+  showNotification(`${idsToDelete.length} đơn hàng đã được xóa thành công.`, 'success')
 }
 
 // Cancel order function
@@ -2679,10 +2775,12 @@ function cancelOrder(orderId) {
 // View order tracking function
 function viewOrderTracking(orderId) {
   const order = orders.find((order) => order.id === orderId && order.userId === currentUser.id)
+  console.log("viewOrderTracking order:", order)
   if (!order) {
     showNotification('Không tìm thấy đơn hàng.', 'error')
     return
   }
+  console.log("Delivery address in order:", order.deliveryAddress)
 
   // Simple tracking steps based on status
   const steps = [
@@ -2694,44 +2792,121 @@ function viewOrderTracking(orderId) {
   let currentStepIndex = steps.findIndex((step) => step.key === order.status)
   if (currentStepIndex === -1) currentStepIndex = 0
 
-  // Simulated delivery tracking data
-  const deliveryInfo = {
-    departure: "Kho trung tâm TP.HCM",
-    currentLocation: "Quận 3, TP.HCM",
-    destination: "Quận 1, TP.HCM",
-    deliveryPerson: {
-      name: "Nguyễn Văn Tài",
-      phone: "0123 456 789",
-      vehicle: "Xe máy số 123-45",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg"
-    },
-    route: [
-      "Kho trung tâm TP.HCM",
-      "Quận 3, TP.HCM",
-      "Quận 1, TP.HCM"
-    ]
+  // Default warehouse location
+  const warehouseCoords = [10.762622, 106.660172]
+  const warehouseName = "Kho trung tâm TP.HCM"
+
+  // Geocode delivery address to get coordinates
+  function geocodeAddress(address) {
+    console.log("Geocoding address:", address)
+    return fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Geocoding result:", data)
+        if (data && data.length > 0) {
+          return {
+            name: data[0].display_name,
+            coords: [parseFloat(data[0].lat), parseFloat(data[0].lon)],
+          }
+        } else {
+          console.warn("No geocoding results found for address:", address)
+          return null
+        }
+      })
+      .catch((error) => {
+        console.error("Geocoding error:", error)
+        return null
+      })
   }
 
-  let trackingHtml = `
-    <div class="order-tracking-modal">
-      <h3>Tiến trình đơn hàng: ${order.id}</h3>
-      <div class="delivery-map-placeholder">
-        <p>Bản đồ theo dõi giao hàng (chưa tích hợp bản đồ thực tế)</p>
-      </div>
-      <ul class="tracking-steps">
-  `
+  // Async function to initialize map with dynamic destination
+  async function initMap() {
+    let destination = {
+      name: order.deliveryAddress || "Địa chỉ chưa xác định",
+      coords: null,
+    }
 
-  steps.forEach((step, index) => {
-    const isActive = index <= currentStepIndex
-    trackingHtml += `
-      <li class="tracking-step ${isActive ? 'active' : ''}">
-        <span class="step-label">${step.label}</span>
-        ${isActive ? '<i class="fas fa-check-circle"></i>' : '<i class="far fa-circle"></i>'}
-      </li>
+    // Remove basic length validation to be more flexible
+    if (!order.deliveryAddress) {
+      alert("Vui lòng nhập địa chỉ giao hàng.")
+      destination.coords = null
+    } else {
+      // Geocode delivery address
+      const geocoded = await geocodeAddress(order.deliveryAddress)
+      if (geocoded) {
+        destination = geocoded
+      } else {
+        alert("Không thể xác định vị trí địa chỉ giao hàng. Vui lòng kiểm tra lại địa chỉ.")
+        destination.coords = null
+      }
+    }
+
+    const deliveryInfo = {
+      departure: { name: warehouseName, coords: warehouseCoords },
+      currentLocation: { name: warehouseName, coords: warehouseCoords },
+      destination: destination,
+      deliveryPerson: {
+        name: "Nguyễn Văn Tài",
+        phone: "0123 456 789",
+        vehicle: "Xe máy số 123-45",
+        avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      },
+      route: [],
+    }
+
+    // If destination coords available, get detailed route from routing API
+    if (destination.coords) {
+      try {
+        const response = await fetch(
+          `https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf6248&start=${warehouseCoords[1]},${warehouseCoords[0]}&end=${destination.coords[1]},${destination.coords[0]}`
+        )
+        const data = await response.json()
+        if (data && data.features && data.features.length > 0) {
+          const coords = data.features[0].geometry.coordinates.map(coord => [coord[1], coord[0]])
+          deliveryInfo.route = [
+            { name: warehouseName, coords: warehouseCoords },
+            ...coords.map((c, i) => ({ name: i === coords.length - 1 ? destination.name : `Điểm ${i + 1}`, coords: c })),
+          ]
+        } else {
+          // Fallback to simple route if no detailed route
+          deliveryInfo.route = [
+            { name: warehouseName, coords: warehouseCoords },
+            { name: destination.name, coords: destination.coords },
+          ]
+        }
+      } catch (error) {
+        console.error("Routing API error:", error)
+        // Fallback to simple route on error
+        deliveryInfo.route = [
+          { name: warehouseName, coords: warehouseCoords },
+          { name: destination.name, coords: destination.coords },
+        ]
+      }
+    } else {
+      // No destination coords, fallback route only warehouse
+      deliveryInfo.route = [
+        { name: warehouseName, coords: warehouseCoords },
+      ]
+    }
+
+    let trackingHtml = `
+      <div class="order-tracking-modal">
+        <h3>Tiến trình đơn hàng: ${order.id}</h3>
+        <div id="delivery-map" style="height: 300px; border-radius: 8px; margin-bottom: 1rem;"></div>
+        <ul class="tracking-steps">
     `
-  })
 
-  trackingHtml += `
+    steps.forEach((step, index) => {
+      const isActive = index <= currentStepIndex
+      trackingHtml += `
+        <li class="tracking-step ${isActive ? 'active' : ''}">
+          <span class="step-label">${step.label}</span>
+          ${isActive ? '<i class="fas fa-check-circle"></i>' : '<i class="far fa-circle"></i>'}
+        </li>
+      `
+    })
+
+    trackingHtml += `
       </ul>
       <div class="delivery-info">
         <h4>Thông tin người giao hàng</h4>
@@ -2745,9 +2920,9 @@ function viewOrderTracking(orderId) {
         </div>
         <h4>Hành trình giao hàng</h4>
         <ol class="delivery-route">
-          ${deliveryInfo.route.map((location) => `<li>${location}</li>`).join('')}
+          ${deliveryInfo.route.map((location) => `<li>${location.name}</li>`).join('')}
         </ol>
-        <p><strong>Vị trí hiện tại:</strong> ${deliveryInfo.currentLocation}</p>
+        <p><strong>Vị trí hiện tại:</strong> ${deliveryInfo.currentLocation.name}</p>
       </div>
       <button onclick="closeOrderTrackingModal()">Đóng</button>
     </div>
@@ -2770,6 +2945,42 @@ function viewOrderTracking(orderId) {
   `
   modal.style.display = 'block'
   document.body.style.overflow = 'hidden'
+
+  // Initialize Leaflet map after modal is displayed
+  setTimeout(() => {
+    if (window.L) {
+      console.log("Delivery destination coords:", deliveryInfo.destination.coords)
+      const centerCoords = deliveryInfo.destination.coords || deliveryInfo.currentLocation.coords
+      const map = L.map('delivery-map').setView(centerCoords, 13)
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors',
+      }).addTo(map)
+
+      // Markers for route points
+      const markers = deliveryInfo.route.map((point) =>
+        L.marker(point.coords).bindPopup(point.name).addTo(map),
+      )
+
+      // Add marker for destination if coords available
+      if (deliveryInfo.destination.coords) {
+        L.marker(deliveryInfo.destination.coords)
+          .bindPopup(`Địa chỉ giao hàng: ${deliveryInfo.destination.name}`)
+          .addTo(map)
+      }
+
+      // Polyline for route
+      const routeCoords = deliveryInfo.route.map((point) => point.coords)
+      const polyline = L.polyline(routeCoords, { color: 'blue' }).addTo(map)
+
+      // Fit map bounds to route
+      map.fitBounds(polyline.getBounds(), { padding: [50, 50] })
+    }
+  }, 100)
+}
+
+  initMap()
 }
 
 function closeOrderTrackingModal() {
