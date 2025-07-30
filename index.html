@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"
     />
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  ></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -28,7 +29,7 @@
 
                 <div class="nav-menu" id="nav-menu">
                     <a href="#home" class="nav-link">Trang chủ</a>
-                    <a href="#products" class="nav-link">Sản phẩm</a>
+                    <a href="products.html" class="nav-link">Sản phẩm</a>
                     <a href="#deals" class="nav-link">Khuyến mãi</a>
                     <a href="#about" class="nav-link">Giới thiệu</a>
                     <a href="#contact" class="nav-link">Liên hệ</a>
@@ -109,7 +110,7 @@
                     <span class="stat-label">Hài lòng</span>
                 </div>
             </div>
-            <button class="cta-button" onclick="scrollToProducts()">
+            <button class="cta-button" onclick="window.location.href='products.html'">
                 Mua sắm ngay <i class="fas fa-arrow-right"></i>
             </button>
         </div>
@@ -140,69 +141,105 @@
                         </div>
                     </div>
                 </div>
-                <button class="flash-sale-btn" onclick="scrollToProducts()">Xem ngay</button>
+                <button class="flash-sale-btn" onclick="window.location.href='products.html'">Xem ngay</button>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products-section">
+    <!-- Features Section -->
+    <section id="features" class="features-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Sản phẩm nổi bật</h2>
-                <div class="view-toggle">
-                    <button class="view-btn active" data-view="grid" onclick="toggleView('grid')">
-                        <i class="fas fa-th"></i>
-                    </button>
-                    <button class="view-btn" data-view="list" onclick="toggleView('list')">
-                        <i class="fas fa-list"></i>
-                    </button>
-                </div>
+                <h2 class="section-title">Tại sao chọn TechStore?</h2>
+                <p class="section-subtitle">Chúng tôi cam kết mang đến trải nghiệm mua sắm tuyệt vời nhất</p>
             </div>
 
-            <!-- Advanced Filters -->
-            <div class="filters-container">
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">Tất cả</button>
-                    <button class="filter-btn" data-filter="laptop">Laptop</button>
-                    <button class="filter-btn" data-filter="phone">Điện thoại</button>
-                    <button class="filter-btn" data-filter="accessory">Phụ kiện</button>
-                </div>
-
-                <div class="advanced-filters">
-                    <div class="price-filter">
-                        <label>Khoảng giá:</label>
-                        <div class="price-range">
-                            <input type="range" id="min-price" min="0" max="50000000" value="0">
-                            <input type="range" id="max-price" min="0" max="50000000" value="50000000">
-                        </div>
-                        <div class="price-display">
-                            <span id="min-price-display">0đ</span> - <span id="max-price-display">50,000,000đ</span>
-                        </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
                     </div>
+                    <h3>Giao hàng nhanh chóng</h3>
+                    <p>Giao hàng trong 24h với dịch vụ express. Miễn phí vận chuyển cho đơn hàng từ 500k.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Giao hàng trong ngày</li>
+                        <li><i class="fas fa-check"></i> Theo dõi đơn hàng realtime</li>
+                        <li><i class="fas fa-check"></i> Đóng gói cẩn thận</li>
+                    </ul>
+                </div>
 
-                    <div class="sort-filter">
-                        <select id="sort-select">
-                            <option value="default">Sắp xếp theo</option>
-                            <option value="price-low">Giá thấp đến cao</option>
-                            <option value="price-high">Giá cao đến thấp</option>
-                            <option value="name">Tên A-Z</option>
-                            <option value="rating">Đánh giá cao nhất</option>
-                        </select>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
+                    <h3>Bảo hành chính hãng</h3>
+                    <p>Tất cả sản phẩm đều có bảo hành chính hãng từ nhà sản xuất với thời gian lên đến 24 tháng.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Bảo hành toàn quốc</li>
+                        <li><i class="fas fa-check"></i> Hỗ trợ kỹ thuật 24/7</li>
+                        <li><i class="fas fa-check"></i> Đổi mới trong 7 ngày</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Giá cả cạnh tranh</h3>
+                    <p>Cam kết giá tốt nhất thị trường với nhiều chương trình khuyến mãi hấp dẫn quanh năm.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Giá tốt nhất thị trường</li>
+                        <li><i class="fas fa-check"></i> Flash sale hàng tuần</li>
+                        <li><i class="fas fa-check"></i> Tích điểm đổi quà</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Hỗ trợ chuyên nghiệp</h3>
+                    <p>Đội ngũ tư vấn viên chuyên nghiệp sẵn sàng hỗ trợ bạn 24/7 qua nhiều kênh khác nhau.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Tư vấn miễn phí</li>
+                        <li><i class="fas fa-check"></i> Chat trực tuyến</li>
+                        <li><i class="fas fa-check"></i> Hotline 24/7</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Chất lượng đảm bảo</h3>
+                    <p>Chỉ bán những sản phẩm chính hãng, chất lượng cao từ các thương hiệu uy tín trên thế giới.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 100% chính hãng</li>
+                        <li><i class="fas fa-check"></i> Kiểm tra chất lượng</li>
+                        <li><i class="fas fa-check"></i> Tem bảo hành rõ ràng</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mua sắm tiện lợi</h3>
+                    <p>Giao diện thân thiện, dễ sử dụng trên mọi thiết bị. Thanh toán đa dạng, an toàn và bảo mật.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Giao diện responsive</li>
+                        <li><i class="fas fa-check"></i> Thanh toán đa dạng</li>
+                        <li><i class="fas fa-check"></i> Bảo mật thông tin</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Products Grid -->
-            <div class="products-grid" id="products-grid">
-                <!-- Products will be loaded here by JavaScript -->
-            </div>
-
-            <!-- Load More Button -->
-            <div class="load-more-container">
-                <button class="load-more-btn" id="load-more-btn" onclick="loadMoreProducts()">
-                    Xem thêm sản phẩm
-                </button>
+            <div class="cta-section">
+                <h3>Sẵn sàng khám phá?</h3>
+                <p>Hãy bắt đầu mua sắm ngay hôm nay và trải nghiệm dịch vụ tuyệt vời của chúng tôi!</p>
+                <a href="products.html" class="cta-button">
+                    <i class="fas fa-shopping-bag"></i> Xem tất cả sản phẩm
+                </a>
             </div>
         </div>
     </section>

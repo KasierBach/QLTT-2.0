@@ -40,7 +40,7 @@ Hệ thống âm thanh 6 loa với công nghệ Spatial Audio tạo ra không gi
       "Cổng kết nối": "3x Thunderbolt 4, HDMI, SDXC, MagSafe 3",
       Webcam: "1080p FaceTime HD camera",
       "Âm thanh": "6-speaker sound system",
-      "Bàn phím": "Magic Keyboard với Touch ID",
+      "Bàn phím": "Magic Keyboard vi Touch ID",
     },
     colors: ["Space Gray", "Silver"],
     storage: ["512GB", "1TB", "2TB"],
@@ -107,8 +107,12 @@ Adaptive Transparency cho phép bạn nghe âm thanh xung quanh một cách tự
 Case sạc MagSafe với loa tích hợp giúp dễ dàng tìm kiếm khi thất lạc. Thời lượng pin lên đến 6 giờ nghe nhạc và 30 giờ với case sạc.`,
     price: 6500000,
     originalPrice: 7000000,
-    image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FMT_WHH?wid=750&hei=556&fmt=jpeg&qlt=90&.v=1724041668836",
-    images: ["https://media.wired.com/photos/671577232009d044328f83e0/master/w_2560%2Cc_limit/AirPods%2520Pro%25202%2520Abstract%2520Background%2520102024%2520SOURCE%2520Apple.jpg", "https://phukiendidong.com/wp-content/uploads/2022/09/airpods-pro-2nd-generation-1.jpg"],
+    image:
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FMT_WHH?wid=750&hei=556&fmt=jpeg&qlt=90&.v=1724041668836",
+    images: [
+      "https://media.wired.com/photos/671577232009d044328f83e0/master/w_2560%2Cc_limit/AirPods%2520Pro%25202%2520Abstract%2520Background%2520102024%2520SOURCE%2520Apple.jpg",
+      "https://phukiendidong.com/wp-content/uploads/2022/09/airpods-pro-2nd-generation-1.jpg",
+    ],
     category: "accessory",
     badge: "Sale",
     rating: 4.7,
@@ -147,7 +151,10 @@ Bàn phím có đèn nền với key travel thoải mái. Trackpad precision l�
     price: 28000000,
     originalPrice: 32000000,
     image: "https://www.laptopvip.vn/images/ab__webp/thumbnails/800/800/detailed/10/71jxN6pEeNL._SL1496_.png.webp",
-    images: ["https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop_dell_xps_13_9350_xps9350-u5ia165w11gr-fp_-_1.png", "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop_dell_xps_13_9350_71058714_-_1.png"],
+    images: [
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop_dell_xps_13_9350_xps9350-u5ia165w11gr-fp_-_1.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop_dell_xps_13_9350_71058714_-_1.png",
+    ],
     category: "laptop",
     rating: 4.6,
     reviewCount: 78,
@@ -189,12 +196,13 @@ Chip Snapdragon 8 Gen 3 for Galaxy được tối ưu riêng mang lại hiệu n
 S Pen với độ trễ siêu thấp cho trải nghiệm viết và vẽ tự nhiên. Pin 5000mAh với sạc nhanh 45W và sạc không dây 15W. Khung titanium cao cấp với kháng nước IP68.`,
     price: 30000000,
     originalPrice: 33000000,
-    image: "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/s/ss-s24-ultra-xam-222.png",
+    image:
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/s/ss-s24-ultra-xam-222.png",
     images: [
       "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung_galaxy_s24_ultra_256gb_-_1.png",
       "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung_galaxy_s24_ultra_256gb_-_2.png",
       "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung_galaxy_s24_ultra_256gb_-_12_2.png",
-      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung_galaxy_s24_ultra_1tb_-_13.png"
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung_galaxy_s24_ultra_1tb_-_13.png",
     ],
     category: "phone",
     badge: "Hot",
@@ -238,11 +246,13 @@ Bề mặt cảm ứng hỗ trợ đầy đủ các gesture như scroll, swipe, 
 Thiết kế ergonomic thoải mái cho cả người thuận tay trái và phải. Tương thích hoàn hảo với Mac và iPad, hỗ trợ một số tính năng trên Windows.`,
     price: 2500000,
     originalPrice: 2800000,
-    image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53?wid=4000&hei=4000&fmt=jpeg&qlt=90&.v=1730508286345",
-    images: ["https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=QytENXB3MzdYRFA4RU1McS9kQ1d6VlZya2lKWlJmUEwrYndWOTJiVWJWQUYwVmtIbGRkS25RMVpBRlo0bk5DUStteWFnS2JDbkxFb1JqRG5KS1RPUWc",
+    image:
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53?wid=4000&hei=4000&fmt=jpeg&qlt=90&.v=1730508286345",
+    images: [
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=QytENXB3MzdYRFA4RU1McS9kQ1d6VlZya2lKWlJmUEwrYndWOTJiVWJWQUYwVmtIbGRkS25RMVpBRlo0bk5DUStteWFnS2JDbkxFb1JqRG5KS1RPUWc",
       "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1730508286345",
       "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1730508286345",
-      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1730508286345"
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1730508286345",
     ],
     category: "accessory",
     rating: 4.3,
@@ -280,8 +290,10 @@ Chip M2 8-core CPU và 10-core GPU xử lý mượt mà mọi tác vụ từ ch�
 Camera TrueDepth với Center Stage và camera sau 12MP với LiDAR Scanner. Kết nối 5G và Wi-Fi 6E cho tốc độ mạng nhanh chóng. Magic Keyboard và Apple Pencil bán riêng.`,
     price: 25000000,
     originalPrice: 28000000,
-    image: "https://product.hstatic.net/1000259254/product/ipad_pro_12.9-inch__space_grey_bbfeb3c1a1964da2a34162e6c556616d_master.jpg",
-    images: ["https://cdn.tgdd.vn/Products/Images/522/294105/Slider/ipad-pro-m2-12-9-inch638035039263101931.jpg", 
+    image:
+      "https://product.hstatic.net/1000259254/product/ipad_pro_12.9-inch__space_grey_bbfeb3c1a1964da2a34162e6c556616d_master.jpg",
+    images: [
+      "https://cdn.tgdd.vn/Products/Images/522/294105/Slider/ipad-pro-m2-12-9-inch638035039263101931.jpg",
       "https://cdn.tgdd.vn/Products/Images/522/294105/ipad-pro-m2-wifi-bac-2-750x500.jpg",
       "https://cdn.tgdd.vn/Products/Images/522/294105/ipad-pro-m2-wifi-bac-4-750x500.jpg",
     ],
@@ -328,8 +340,10 @@ Pin 30 giờ với sạc nhanh 3 phút cho 3 giờ sử dụng. Multipoint conne
     price: 8500000,
     originalPrice: 9500000,
     image: "https://www.sony.com.vn/image/6145c1d32e6ac8e63a46c912dc33c5bb?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
-    images: ["https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_172_2.png", 
-      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/a/tai-nghe-chup-tai-sony-wh-1000xm5-ksp-2.png"],
+    images: [
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_172_2.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/a/tai-nghe-chup-tai-sony-wh-1000xm5-ksp-2.png",
+    ],
     category: "accessory",
     badge: "Sale",
     rating: 4.8,
@@ -460,23 +474,23 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeApp()
 
   // Add event listeners for user account modal tabs
-  const tabProfileBtn = document.getElementById('tab-profile-btn')
-  const tabOrdersBtn = document.getElementById('tab-orders-btn')
-  const tabSettingsBtn = document.getElementById('tab-settings-btn')
+  const tabProfileBtn = document.getElementById("tab-profile-btn")
+  const tabOrdersBtn = document.getElementById("tab-orders-btn")
+  const tabSettingsBtn = document.getElementById("tab-settings-btn")
 
   if (tabProfileBtn) {
-    tabProfileBtn.addEventListener('click', () => {
-      showUserAccountTab('profile')
+    tabProfileBtn.addEventListener("click", () => {
+      showUserAccountTab("profile")
     })
   }
   if (tabOrdersBtn) {
-    tabOrdersBtn.addEventListener('click', () => {
-      showUserAccountTab('orders')
+    tabOrdersBtn.addEventListener("click", () => {
+      showUserAccountTab("orders")
     })
   }
   if (tabSettingsBtn) {
-    tabSettingsBtn.addEventListener('click', () => {
-      showUserAccountTab('settings')
+    tabSettingsBtn.addEventListener("click", () => {
+      showUserAccountTab("settings")
     })
   }
 })
@@ -616,7 +630,9 @@ function setupEventListeners() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault()
-      const target = document.querySelector(this.getAttribute("href"))
+      const href = this.getAttribute("href")
+      if (!href || href === "#") return
+      const target = document.querySelector(href)
       if (target) {
         target.scrollIntoView({
           behavior: "smooth",
@@ -2069,76 +2085,139 @@ function showCheckoutStep(step) {
   switch (step) {
     case 1:
       checkoutForm.innerHTML = `
-                <div class="form-section">
-                    <h3>Thông tin giao hàng</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Họ và tên *</label>
-                            <input type="text" name="fullName" value="${currentUser?.fullName || ""}" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Số điện thoại *</label>
-                            <input type="tel" name="phone" value="${currentUser?.phone || ""}" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" name="email" value="${currentUser?.email || ""}" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Địa chỉ *</label>
-                        <textarea id="address-textarea" name="address" rows="3" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố" required></textarea>
-                    </div>
-                    <div id="checkout-map" style="height: 300px; border: 1px solid var(--border-color); border-radius: var(--border-radius); margin-bottom: 1rem;"></div>
-                    <div class="form-group">
-                        <label>Ghi chú đơn hàng</label>
-                        <textarea name="notes" rows="2" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
-                    </div>
-                </div>
-                <div class="checkout-actions">
-                    <button type="button" class="checkout-back" onclick="closeCheckoutModal()">Quay lại</button>
-                    <button type="button" class="checkout-next" onclick="showCheckoutStep(2)">Tiếp tục</button>
-                </div>
-            `
+    <div class="form-section">
+        <h3>Thông tin giao hàng</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Họ và tên *</label>
+                <input type="text" name="fullName" value="${currentUser?.fullName || ""}" required>
+            </div>
+            <div class="form-group">
+                <label>Số điện thoại *</label>
+                <input type="tel" name="phone" value="${currentUser?.phone || ""}" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" value="${currentUser?.email || ""}" required>
+        </div>
+        <div class="form-group">
+            <label>Địa chỉ giao hàng *</label>
+            <div class="address-input-container">
+                <textarea id="address-textarea" name="address" rows="2" placeholder="Nhập địa chỉ hoặc chọn trên bản đồ" required></textarea>
+                <button type="button" class="map-search-btn" onclick="searchAddressOnMap()">
+                    <i class="fas fa-search-location"></i> Tìm trên bản đồ
+                </button>
+            </div>
+        </div>
+        <div class="map-container">
+            <div id="checkout-map" style="height: 350px; border: 1px solid var(--border-color); border-radius: var(--border-radius); margin-bottom: 1rem;"></div>
+            <div class="map-controls">
+                <button type="button" class="map-btn" onclick="getCurrentLocation()">
+                    <i class="fas fa-location-arrow"></i> Vị trí hiện tại
+                </button>
+                <button type="button" class="map-btn" onclick="confirmMapLocation()">
+                    <i class="fas fa-check"></i> Xác nhận địa chỉ
+                </button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Ghi chú đơn hàng</label>
+            <textarea name="notes" rows="2" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
+        </div>
+    </div>
+    <div class="checkout-actions">
+        <button type="button" class="checkout-back" onclick="closeCheckoutModal()">
+            <i class="fas fa-arrow-left"></i> Quay lại
+        </button>
+        <button type="button" class="checkout-next" onclick="validateAndContinue(2)">
+            Tiếp tục <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+  `
       initializeCheckoutMap()
       break
 
     case 2:
       checkoutForm.innerHTML = `
                 <div class="form-section">
-                    <h3>Phương thức giao hàng</h3>
-                    <div class="payment-methods">
-                        <div class="payment-method selected">
+                    <h3><i class="fas fa-truck"></i> Phương thức giao hàng</h3>
+                    <div class="shipping-options">
+                        <div class="shipping-method selected" data-method="standard" data-fee="0">
                             <input type="radio" name="shipping" value="standard" checked>
-                            <div class="payment-icon"><i class="fas fa-truck"></i></div>
-                            <div>
-                                <strong>Giao hàng tiêu chuẩn</strong>
-                                <p>2-3 ngày làm việc - Miễn phí</p>
+                            <div class="shipping-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="shipping-info">
+                                <h4>Giao hàng tiêu chuẩn</h4>
+                                <p>2-3 ngày làm việc</p>
+                                <span class="shipping-fee">Miễn phí</span>
+                            </div>
+                            <div class="shipping-time">
+                                <i class="fas fa-clock"></i>
+                                <span>2-3 ngày</span>
                             </div>
                         </div>
-                        <div class="payment-method">
+                        <div class="shipping-method" data-method="express" data-fee="50000">
                             <input type="radio" name="shipping" value="express">
-                            <div class="payment-icon"><i class="fas fa-shipping-fast"></i></div>
-                            <div>
-                                <strong>Giao hàng nhanh</strong>
-                                <p>1-2 ngày làm việc - 50,000đ</p>
+                            <div class="shipping-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="shipping-info">
+                                <h4>Giao hàng nhanh</h4>
+                                <p>1-2 ngày làm việc</p>
+                                <span class="shipping-fee">50,000đ</span>
+                            </div>
+                            <div class="shipping-time">
+                                <i class="fas fa-clock"></i>
+                                <span>1-2 ngày</span>
                             </div>
                         </div>
-                        <div class="payment-method">
+                        <div class="shipping-method" data-method="same-day" data-fee="100000">
                             <input type="radio" name="shipping" value="same-day">
-                            <div class="payment-icon"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <strong>Giao hàng trong ngày</strong>
-                                <p>Trong vòng 4-6 giờ - 100,000đ</p>
+                            <div class="shipping-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="shipping-info">
+                                <h4>Giao hàng trong ngày</h4>
+                                <p>Trong vòng 4-6 giờ</p>
+                                <span class="shipping-fee">100,000đ</span>
+                            </div>
+                            <div class="shipping-time">
+                                <i class="fas fa-clock"></i>
+                                <span>4-6 giờ</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="delivery-time-selector">
+                        <h4><i class="fas fa-calendar-alt"></i> Chọn thời gian giao hàng</h4>
+                        <div class="time-slots">
+                            <div class="time-slot active" data-time="morning">
+                                <i class="fas fa-sun"></i>
+                                <span>Sáng (8:00 - 12:00)</span>
+                            </div>
+                            <div class="time-slot" data-time="afternoon">
+                                <i class="fas fa-cloud-sun"></i>
+                                <span>Chiều (13:00 - 17:00)</span>
+                            </div>
+                            <div class="time-slot" data-time="evening">
+                                <i class="fas fa-moon"></i>
+                                <span>Tối (18:00 - 21:00)</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="checkout-actions">
-                    <button type="button" class="checkout-back" onclick="showCheckoutStep(1)">Quay lại</button>
-                    <button type="button" class="checkout-next" onclick="showCheckoutStep(3)">Tiếp tục</button>
+                    <button type="button" class="checkout-back" onclick="showCheckoutStep(1)">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </button>
+                    <button type="button" class="checkout-next" onclick="showCheckoutStep(3)">
+                        Tiếp tục <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
             `
+      setupShippingMethodHandlers()
       break
 
     case 3:
@@ -2150,7 +2229,7 @@ function showCheckoutStep(step) {
             ? subtotal * appliedCoupon.discount
             : appliedCoupon.discount
       }
-      const shippingFee = 0 // Free shipping for now
+      const shippingFee = getSelectedShippingFee()
       const total = subtotal - discount + shippingFee
 
       checkoutForm.innerHTML = `
@@ -2159,88 +2238,141 @@ function showCheckoutStep(step) {
                     <div class="payment-methods">
                         <div class="payment-method selected">
                             <input type="radio" name="payment" value="cod" checked>
-                            <div class="payment-icon"><i class="fas fa-money-bill-wave"></i></div>
-                            <div>
-                                <strong>Thanh toán khi nhận hàng (COD)</strong>
+                            <div class="payment-info">
+                                <h4>Thanh toán khi nhận hàng (COD)</h4>
                                 <p>Thanh toán bằng tiền mặt khi nhận hàng</p>
+                                <span class="payment-badge">Phổ biến</span>
                             </div>
                         </div>
                         <div class="payment-method">
                             <input type="radio" name="payment" value="bank">
-                            <div class="payment-icon"><i class="fas fa-university"></i></div>
-                            <div>
-                                <strong>Chuyển khoản ngân hàng</strong>
+                            <div class="payment-info">
+                                <h4>Chuyển khoản ngân hàng</h4>
                                 <p>Chuyển khoản qua ATM/Internet Banking</p>
+                                <span class="payment-discount">Giảm 2%</span>
                             </div>
                         </div>
                         <div class="payment-method">
                             <input type="radio" name="payment" value="momo">
-                            <div class="payment-icon"><i class="fas fa-mobile-alt"></i></div>
-                            <div>
-                                <strong>Ví MoMo</strong>
+                            <div class="payment-info">
+                                <h4>Ví MoMo</h4>
                                 <p>Thanh toán qua ví điện tử MoMo</p>
+                                <span class="payment-discount">Giảm 1%</span>
                             </div>
                         </div>
                         <div class="payment-method">
                             <input type="radio" name="payment" value="card">
-                            <div class="payment-icon"><i class="fas fa-credit-card"></i></div>
-                            <div>
-                                <strong>Thẻ tín dụng/ghi nợ</strong>
+                            <div class="payment-info">
+                                <h4>Thẻ tín dụng/ghi nợ</h4>
                                 <p>Visa, Mastercard, JCB</p>
+                                <span class="payment-secure"><i class="fas fa-shield-alt"></i> Bảo mật</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-section">
-                    <h3>Tóm tắt đơn hàng</h3>
-                    <div style="background: var(--surface-color); padding: 1.5rem; border-radius: 8px;">
-                        ${cart
-                          .map(
-                            (item) => `
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span>${item.name} x${item.quantity}</span>
-                                <span>${formatPrice(item.price * item.quantity)}</span>
-                            </div>
-                        `,
-                          )
-                          .join("")}
-                        <hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border-color);">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span>Tạm tính:</span>
-                            <span>${formatPrice(subtotal)}</span>
+                    <h3><i class="fas fa-receipt"></i> Tóm tắt đơn hàng</h3>
+                    <div class="order-summary">
+                        <div class="order-items">
+                            ${cart
+                              .map(
+                                (item) => `
+                                <div class="order-item">
+                                    <img src="${item.image}" alt="${item.name}">
+                                    <div class="item-info">
+                                        <h4>${item.name}</h4>
+                                        <p>Số lượng: ${item.quantity}</p>
+                                        ${item.selectedColor ? `<p>Màu: ${item.selectedColor}</p>` : ""}
+                                    </div>
+                                    <div class="item-price">${formatPrice(item.price * item.quantity)}</div>
+                                </div>
+                            `,
+                              )
+                              .join("")}
                         </div>
-                        ${
-                          discount > 0
-                            ? `
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; color: var(--success-color);">
-                                <span>Giảm giá:</span>
-                                <span>-${formatPrice(discount)}</span>
+                        
+                        <div class="order-totals">
+                            <div class="total-row">
+                                <span>Tạm tính:</span>
+                                <span>${formatPrice(subtotal)}</span>
                             </div>
-                        `
-                            : ""
-                        }
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span>Phí vận chuyển:</span>
-                            <span>${shippingFee > 0 ? formatPrice(shippingFee) : "Miễn phí"}</span>
-                        </div>
-                        <hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border-color);">
-                        <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 600;">
-                            <span>Tổng cộng:</span>
-                            <span style="color: var(--accent-color);">${formatPrice(total)}</span>
+                            ${
+                              discount > 0
+                                ? `
+                                <div class="total-row discount">
+                                    <span>Giảm giá:</span>
+                                    <span>-${formatPrice(discount)}</span>
+                                </div>
+                            `
+                                : ""
+                            }
+                            <div class="total-row">
+                                <span>Phí vận chuyển:</span>
+                                <span>${shippingFee > 0 ? formatPrice(shippingFee) : "Miễn phí"}</span>
+                            </div>
+                            <div class="total-row final">
+                                <span>Tổng cộng:</span>
+                                <span>${formatPrice(total)}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="checkout-actions">
-                    <button type="button" class="checkout-back" onclick="showCheckoutStep(2)">Quay lại</button>
-                    <button type="button" class="checkout-next" onclick="completeOrder()">Đặt hàng</button>
+                    <button type="button" class="checkout-back" onclick="showCheckoutStep(2)">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </button>
+                    <button type="button" class="checkout-next primary" onclick="completeOrder()">
+                        <i class="fas fa-check"></i> Đặt hàng
+                    </button>
                 </div>
             `
+      setupPaymentMethodHandlers()
       break
   }
+}
 
-  // Add event listeners for payment method selection
+// Thêm các hàm hỗ trợ mới
+function validateAndContinue(nextStep) {
+  const form = document.getElementById("checkout-form")
+  const inputs = form.querySelectorAll("input[required], textarea[required]")
+  let isValid = true
+
+  inputs.forEach((input) => {
+    if (!input.value.trim()) {
+      input.style.borderColor = "var(--accent-color)"
+      isValid = false
+    } else {
+      input.style.borderColor = "var(--border-color)"
+    }
+  })
+
+  if (isValid) {
+    showCheckoutStep(nextStep)
+  } else {
+    showNotification("Vui lòng điền đầy đủ thông tin bắt buộc", "warning")
+  }
+}
+
+function setupShippingMethodHandlers() {
+  document.querySelectorAll(".shipping-method").forEach((method) => {
+    method.addEventListener("click", function () {
+      document.querySelectorAll(".shipping-method").forEach((m) => m.classList.remove("selected"))
+      this.classList.add("selected")
+      this.querySelector('input[type="radio"]').checked = true
+    })
+  })
+
+  document.querySelectorAll(".time-slot").forEach((slot) => {
+    slot.addEventListener("click", function () {
+      document.querySelectorAll(".time-slot").forEach((s) => s.classList.remove("active"))
+      this.classList.add("active")
+    })
+  })
+}
+
+function setupPaymentMethodHandlers() {
   document.querySelectorAll(".payment-method").forEach((method) => {
     method.addEventListener("click", function () {
       document.querySelectorAll(".payment-method").forEach((m) => m.classList.remove("selected"))
@@ -2250,12 +2382,134 @@ function showCheckoutStep(step) {
   })
 }
 
+function getSelectedShippingFee() {
+  const selectedMethod = document.querySelector(".shipping-method.selected")
+  return selectedMethod ? Number.parseInt(selectedMethod.dataset.fee) : 0
+}
+
+let checkoutMap = null
+let selectedLocation = null
+
+function initializeCheckoutMap() {
+  setTimeout(() => {
+    if (window.L && document.getElementById("checkout-map")) {
+      // Default to Ho Chi Minh City center
+      const defaultCoords = [10.762622, 106.660172]
+
+      checkoutMap = L.map("checkout-map").setView(defaultCoords, 13)
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "&copy; OpenStreetMap contributors",
+      }).addTo(checkoutMap)
+
+      // Add click handler for map
+      checkoutMap.on("click", (e) => {
+        selectLocationOnMap(e.latlng)
+      })
+
+      // Try to get user's current location
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const userCoords = [position.coords.latitude, position.coords.longitude]
+            checkoutMap.setView(userCoords, 15)
+            selectLocationOnMap(L.latLng(userCoords[0], userCoords[1]))
+          },
+          (error) => {
+            console.log("Could not get user location:", error)
+          },
+        )
+      }
+    }
+  }, 100)
+}
+
+function selectLocationOnMap(latlng) {
+  selectedLocation = latlng
+
+  // Remove existing markers
+  checkoutMap.eachLayer((layer) => {
+    if (layer instanceof L.Marker) {
+      checkoutMap.removeLayer(layer)
+    }
+  })
+
+  // Add new marker
+  const marker = L.marker([latlng.lat, latlng.lng]).addTo(checkoutMap).bindPopup("Địa chỉ giao hàng").openPopup()
+
+  // Reverse geocoding to get address
+  fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latlng.lat}&lon=${latlng.lng}`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data && data.display_name) {
+        document.getElementById("address-textarea").value = data.display_name
+      }
+    })
+    .catch((error) => {
+      console.error("Reverse geocoding error:", error)
+    })
+}
+
+function searchAddressOnMap() {
+  const address = document.getElementById("address-textarea").value.trim()
+  if (!address) {
+    showNotification("Vui lòng nhập địa chỉ để tìm kiếm", "warning")
+    return
+  }
+
+  fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data && data.length > 0) {
+        const result = data[0]
+        const coords = [Number.parseFloat(result.lat), Number.parseFloat(result.lon)]
+        checkoutMap.setView(coords, 15)
+        selectLocationOnMap(L.latLng(coords[0], coords[1]))
+        showNotification("Đã tìm thấy địa chỉ trên bản đồ", "success")
+      } else {
+        showNotification("Không tìm thấy địa chỉ. Vui lòng thử lại.", "error")
+      }
+    })
+    .catch((error) => {
+      console.error("Geocoding error:", error)
+      showNotification("Lỗi khi tìm kiếm địa chỉ", "error")
+    })
+}
+
+function getCurrentLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const coords = [position.coords.latitude, position.coords.longitude]
+        checkoutMap.setView(coords, 15)
+        selectLocationOnMap(L.latLng(coords[0], coords[1]))
+        showNotification("Đã cập nhật vị trí hiện tại", "success")
+      },
+      (error) => {
+        showNotification("Không thể lấy vị trí hiện tại", "error")
+      },
+    )
+  } else {
+    showNotification("Trình duyệt không hỗ trợ định vị", "error")
+  }
+}
+
+function confirmMapLocation() {
+  if (selectedLocation) {
+    showNotification("Đã xác nhận địa chỉ giao hàng", "success")
+  } else {
+    showNotification("Vui lòng chọn địa chỉ trên bản đồ", "warning")
+  }
+}
+
 function completeOrder() {
   showLoading()
 
-  // Get delivery address from checkout form
+  // Get delivery address and coordinates
   const addressTextarea = document.querySelector('#checkout-form textarea[name="address"]')
   const deliveryAddress = addressTextarea ? addressTextarea.value.trim() : ""
+  const deliveryCoords = selectedLocation ? [selectedLocation.lat, selectedLocation.lng] : null
 
   // Simulate order processing
   setTimeout(() => {
@@ -2268,7 +2522,8 @@ function completeOrder() {
           ? subtotal * appliedCoupon.discount
           : appliedCoupon.discount
     }
-    const total = subtotal - discount
+    const shippingFee = getSelectedShippingFee()
+    const total = subtotal - discount + shippingFee
 
     const order = {
       id: orderId,
@@ -2276,11 +2531,15 @@ function completeOrder() {
       items: [...cart],
       subtotal,
       discount,
+      shippingFee,
       total,
       status: "pending",
       date: new Date().toISOString(),
       appliedCoupon: appliedCoupon ? appliedCoupon.description : null,
-      deliveryAddress: deliveryAddress, // Save delivery address
+      deliveryAddress: deliveryAddress,
+      deliveryCoords: deliveryCoords, // Save coordinates
+      shippingMethod: document.querySelector('input[name="shipping"]:checked')?.value || "standard",
+      paymentMethod: document.querySelector('input[name="payment"]:checked')?.value || "cod",
     }
 
     orders.push(order)
@@ -2292,6 +2551,7 @@ function completeOrder() {
     // Clear cart
     cart = []
     appliedCoupon = null
+    selectedLocation = null
     updateCartUI()
     saveCart()
 
@@ -2306,6 +2566,7 @@ function completeOrder() {
 
 Mã đơn hàng: ${orderId}
 Tổng tiền: ${formatPrice(total)}
+Phí vận chuyển: ${shippingFee > 0 ? formatPrice(shippingFee) : "Miễn phí"}
 
 Chúng tôi sẽ liên hệ với bạn sớm nhất để xác nhận đơn hàng.`)
     }, 1000)
@@ -2332,7 +2593,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Attach scroll event listener to chatMessages here to ensure element exists
   const chatMessagesEl = document.getElementById("chat-messages")
   if (chatMessagesEl) {
-    chatMessagesEl.addEventListener('wheel', function(e) {
+    chatMessagesEl.addEventListener("wheel", (e) => {
       const delta = e.deltaY
       const up = delta < 0
       const down = delta > 0
@@ -2347,23 +2608,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Add event listeners for user account modal tabs
-  const tabProfileBtn = document.getElementById('tab-profile-btn')
-  const tabOrdersBtn = document.getElementById('tab-orders-btn')
-  const tabSettingsBtn = document.getElementById('tab-settings-btn')
+  const tabProfileBtn = document.getElementById("tab-profile-btn")
+  const tabOrdersBtn = document.getElementById("tab-orders-btn")
+  const tabSettingsBtn = document.getElementById("tab-settings-btn")
 
   if (tabProfileBtn) {
-    tabProfileBtn.addEventListener('click', () => {
-      showUserAccountTab('profile')
+    tabProfileBtn.addEventListener("click", () => {
+      showUserAccountTab("profile")
     })
   }
   if (tabOrdersBtn) {
-    tabOrdersBtn.addEventListener('click', () => {
-      showUserAccountTab('orders')
+    tabOrdersBtn.addEventListener("click", () => {
+      showUserAccountTab("orders")
     })
   }
   if (tabSettingsBtn) {
-    tabSettingsBtn.addEventListener('click', () => {
-      showUserAccountTab('settings')
+    tabSettingsBtn.addEventListener("click", () => {
+      showUserAccountTab("settings")
     })
   }
 })
@@ -2417,29 +2678,76 @@ function getBotResponse(userMessage) {
   }
 }
 
+// Dynamic flash sale start and end times (ISO 8601 format)
+// Updated to current time and 24 hours later for testing
+const flashSaleStart = new Date().getTime()
+const flashSaleEnd = flashSaleStart + 24 * 60 * 60 * 1000
+
 // Countdown Timer for Flash Sale
+// Refactored startCountdown to avoid replacing innerHTML inside interval repeatedly
+// Added console logs for debugging countdown
+// Added null checks and delayed startCountdown call to DOMContentLoaded
 function startCountdown() {
-  const countdownDate = new Date().getTime() + 24 * 60 * 60 * 1000 // 24 hours from now
+  console.log("startCountdown called")
+  const countdownElement = document.getElementById("countdown")
+  const hoursElement = document.getElementById("hours")
+  const minutesElement = document.getElementById("minutes")
+  const secondsElement = document.getElementById("seconds")
 
-  const timer = setInterval(() => {
+  if (!countdownElement || !hoursElement || !minutesElement || !secondsElement) {
+    console.warn("Countdown elements not found, aborting countdown")
+    return
+  }
+
+  function updateCountdown() {
+    console.log("updateCountdown called")
     const now = new Date().getTime()
-    const distance = countdownDate - now
+    console.log("now:", now, "flashSaleStart:", flashSaleStart, "flashSaleEnd:", flashSaleEnd)
 
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    if (now < flashSaleStart) {
+      console.log("Flash sale not started yet")
+      countdownElement.style.display = "block"
+      hoursElement.parentElement.style.display = "none"
+      countdownElement.innerHTML = '<div style="color: var(--accent-color); font-weight: 600;">Flash Sale sắp bắt đầu!</div>'
+      return false
+    }
+
+    if (now > flashSaleEnd) {
+      console.log("Flash sale ended")
+      countdownElement.style.display = "block"
+      hoursElement.parentElement.style.display = "none"
+      countdownElement.innerHTML = '<div style="color: var(--accent-color); font-weight: 600;">Flash Sale đã kết thúc!</div>'
+      return false
+    }
+
+    const distance = flashSaleEnd - now
+    console.log("distance:", distance)
+
+    const hours = Math.floor(distance / (1000 * 60 * 60))
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
     const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+    console.log("hours:", hours, "minutes:", minutes, "seconds:", seconds)
 
-    document.getElementById("hours").textContent = hours.toString().padStart(2, "0")
-    document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0")
-    document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0")
+    countdownElement.style.display = "flex"
+    hoursElement.parentElement.style.display = "flex"
+    hoursElement.textContent = hours.toString().padStart(2, "0")
+    minutesElement.textContent = minutes.toString().padStart(2, "0")
+    secondsElement.textContent = seconds.toString().padStart(2, "0")
+    return true
+  }
 
-    if (distance < 0) {
+  updateCountdown()
+  const timer = setInterval(() => {
+    if (!updateCountdown()) {
       clearInterval(timer)
-      document.getElementById("countdown").innerHTML =
-        '<div style="color: var(--accent-color); font-weight: 600;">Flash Sale đã kết thúc!</div>'
     }
   }, 1000)
 }
+
+// Delay startCountdown call until DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+  startCountdown()
+})
 
 // Utility Functions
 function formatPrice(price) {
@@ -2503,9 +2811,7 @@ function hideLoading() {
 }
 
 function scrollToProducts() {
-  document.getElementById("products").scrollIntoView({
-    behavior: "smooth",
-  })
+  window.location.href = "products.html"
 }
 
 function scrollToTop() {
@@ -2538,53 +2844,53 @@ function handleContactForm(e) {
 // Additional Features
 function showProfile() {
   showUserAccountModal()
-  showUserAccountTab('profile')
+  showUserAccountTab("profile")
   loadUserProfile()
 }
 
 function showOrderHistory() {
   showUserAccountModal()
-  showUserAccountTab('orders')
+  showUserAccountTab("orders")
   loadUserOrderHistory()
 }
 
 function showSettings() {
   showUserAccountModal()
-  showUserAccountTab('settings')
+  showUserAccountTab("settings")
   loadUserSettings()
 }
 
 // Show user account modal
 function showUserAccountModal() {
-  const modal = document.getElementById('user-account-modal')
+  const modal = document.getElementById("user-account-modal")
   if (modal) {
-    modal.style.display = 'block'
-    document.body.style.overflow = 'hidden'
+    modal.style.display = "block"
+    document.body.style.overflow = "hidden"
   }
 }
 
 // Close user account modal
 function closeUserAccountModal() {
-  const modal = document.getElementById('user-account-modal')
+  const modal = document.getElementById("user-account-modal")
   if (modal) {
-    modal.style.display = 'none'
-    document.body.style.overflow = 'auto'
+    modal.style.display = "none"
+    document.body.style.overflow = "auto"
   }
 }
 
 // Switch tabs inside user account modal
 function showUserAccountTab(tabName) {
-  const tabs = ['profile', 'orders', 'settings']
+  const tabs = ["profile", "orders", "settings"]
   tabs.forEach((tab) => {
     const btn = document.getElementById(`tab-${tab}-btn`)
     const content = document.getElementById(`user-${tab}-tab`)
     if (btn && content) {
       if (tab === tabName) {
-        btn.classList.add('active')
-        content.classList.add('active')
+        btn.classList.add("active")
+        content.classList.add("active")
       } else {
-        btn.classList.remove('active')
-        content.classList.remove('active')
+        btn.classList.remove("active")
+        content.classList.remove("active")
       }
     }
   })
@@ -2592,24 +2898,24 @@ function showUserAccountTab(tabName) {
 
 // Load user profile content
 function loadUserProfile() {
-  const profileTab = document.getElementById('user-profile-tab')
+  const profileTab = document.getElementById("user-profile-tab")
   if (!profileTab) return
 
   if (!currentUser) {
-    profileTab.innerHTML = '<p>Vui lòng đăng nhập để xem hồ sơ.</p>'
+    profileTab.innerHTML = "<p>Vui lòng đăng nhập để xem hồ sơ.</p>"
     return
   }
 
   profileTab.innerHTML = `
     <form id="profile-form" class="profile-info">
       <label for="fullName">Họ và tên</label>
-      <input type="text" id="fullName" name="fullName" value="${currentUser.fullName || ''}" required>
+      <input type="text" id="fullName" name="fullName" value="${currentUser.fullName || ""}" required>
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" value="${currentUser.email || ''}" required disabled>
+      <input type="email" id="email" name="email" value="${currentUser.email || ""}" required disabled>
 
       <label for="phone">Số điện thoại</label>
-      <input type="tel" id="phone" name="phone" value="${currentUser.phone || ''}" required>
+      <input type="tel" id="phone" name="phone" value="${currentUser.phone || ""}" required>
 
       <label for="address">Địa chỉ</label>
       <textarea id="address" name="address" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"></textarea>
@@ -2621,8 +2927,8 @@ function loadUserProfile() {
     </form>
   `
 
-  const profileForm = document.getElementById('profile-form')
-  profileForm.addEventListener('submit', (e) => {
+  const profileForm = document.getElementById("profile-form")
+  profileForm.addEventListener("submit", (e) => {
     e.preventDefault()
     saveUserProfile()
   })
@@ -2630,9 +2936,9 @@ function loadUserProfile() {
 
 // Save user profile changes
 function saveUserProfile() {
-  const fullNameInput = document.getElementById('fullName')
-  const phoneInput = document.getElementById('phone')
-  const addressInput = document.getElementById('address')
+  const fullNameInput = document.getElementById("fullName")
+  const phoneInput = document.getElementById("phone")
+  const addressInput = document.getElementById("address")
 
   if (!fullNameInput || !phoneInput || !addressInput) return
 
@@ -2641,47 +2947,47 @@ function saveUserProfile() {
   currentUser.address = addressInput.value.trim()
 
   // Update localStorage and UI
-  localStorage.setItem('currentUser', JSON.stringify(currentUser))
+  localStorage.setItem("currentUser", JSON.stringify(currentUser))
   const userIndex = users.findIndex((u) => u.id === currentUser.id)
   if (userIndex > -1) {
     users[userIndex] = currentUser
-    localStorage.setItem('users', JSON.stringify(users))
+    localStorage.setItem("users", JSON.stringify(users))
   }
 
   updateUserUI()
-  showNotification('Cập nhật hồ sơ thành công!', 'success')
+  showNotification("Cập nhật hồ sơ thành công!", "success")
 }
 
 // Load user order history content
 function loadUserOrderHistory() {
-  const ordersTab = document.getElementById('user-orders-tab')
+  const ordersTab = document.getElementById("user-orders-tab")
   if (!ordersTab) return
 
   if (!currentUser) {
-    ordersTab.innerHTML = '<p>Vui lòng đăng nhập để xem lịch sử đơn hàng.</p>'
+    ordersTab.innerHTML = "<p>Vui lòng đăng nhập để xem lịch sử đơn hàng.</p>"
     return
   }
 
   const userOrders = orders.filter((order) => order.userId === currentUser.id)
 
   if (userOrders.length === 0) {
-    ordersTab.innerHTML = '<p>Bạn chưa có đơn hàng nào.</p>'
+    ordersTab.innerHTML = "<p>Bạn chưa có đơn hàng nào.</p>"
     return
   }
 
   // Helper function to get status label and color
   function getStatusInfo(status) {
     switch (status) {
-      case 'pending':
-        return { label: 'Đang xử lý', color: 'var(--warning-color)' }
-      case 'shipped':
-        return { label: 'Đang giao hàng', color: 'var(--primary-color)' }
-      case 'delivered':
-        return { label: 'Đã giao hàng', color: 'var(--success-color)' }
-      case 'cancelled':
-        return { label: 'Đã hủy', color: 'var(--accent-color)' }
+      case "pending":
+        return { label: "Đang xử lý", color: "var(--warning-color)" }
+      case "shipped":
+        return { label: "Đang giao hàng", color: "var(--primary-color)" }
+      case "delivered":
+        return { label: "Đã giao hàng", color: "var(--success-color)" }
+      case "cancelled":
+        return { label: "Đã hủy", color: "var(--accent-color)" }
       default:
-        return { label: status, color: 'var(--text-secondary)' }
+        return { label: status, color: "var(--text-secondary)" }
     }
   }
 
@@ -2704,9 +3010,9 @@ function loadUserOrderHistory() {
         </div>
         <div class="order-actions">
           ${
-            order.status !== 'cancelled' && order.status !== 'delivered'
+            order.status !== "cancelled" && order.status !== "delivered"
               ? `<button class="cancel-order-btn" onclick="cancelOrder('${order.id}')">Hủy đơn hàng</button>`
-              : ''
+              : ""
           }
           <button class="track-order-btn" onclick="viewOrderTracking('${order.id}')">Xem tiến trình</button>
           <button class="delete-order-btn" onclick="deleteOrder('${order.id}')" style="background: var(--accent-color); color: white; border: none; border-radius: 5px; margin-left: 0.5rem; cursor: pointer;">
@@ -2716,198 +3022,140 @@ function loadUserOrderHistory() {
       </li>
     `
   })
-  html += '</ul>'
+  html += "</ul>"
 
   ordersTab.innerHTML = html
 }
 
 // Delete single order
 function deleteOrder(orderId) {
-  if (!confirm('Bạn có chắc chắn muốn xóa đơn hàng này?')) return
+  if (!confirm("Bạn có chắc chắn muốn xóa đơn hàng này?")) return
 
   orders = orders.filter((order) => order.id !== orderId || order.userId !== currentUser.id)
-  localStorage.setItem('orders', JSON.stringify(orders))
+  localStorage.setItem("orders", JSON.stringify(orders))
   loadUserOrderHistory()
-  showNotification('Đơn hàng đã được xóa thành công.', 'success')
+  showNotification("Đơn hàng đã được xóa thành công.", "success")
 }
 
 function deleteSelectedOrders() {
   console.log("deleteSelectedOrders called")
-  const checkboxes = document.querySelectorAll('.order-select-checkbox:checked')
+  const checkboxes = document.querySelectorAll(".order-select-checkbox:checked")
   console.log("Selected checkboxes:", checkboxes)
   if (checkboxes.length === 0) {
-    alert('Vui lòng chọn ít nhất một đơn hàng để xóa.')
+    alert("Vui lòng chọn ít nhất một đơn hàng để xóa.")
     return
   }
 
   if (!confirm(`Bạn có chắc chắn muốn xóa ${checkboxes.length} đơn hàng đã chọn?`)) return
 
-  const idsToDelete = Array.from(checkboxes).map((cb) => cb.getAttribute('data-order-id'))
+  const idsToDelete = Array.from(checkboxes).map((cb) => cb.getAttribute("data-order-id"))
   console.log("IDs to delete:", idsToDelete)
 
   orders = orders.filter((order) => !idsToDelete.includes(order.id) || order.userId !== currentUser.id)
-  localStorage.setItem('orders', JSON.stringify(orders))
+  localStorage.setItem("orders", JSON.stringify(orders))
   loadUserOrderHistory()
-  showNotification(`${idsToDelete.length} đơn hàng đã được xóa thành công.`, 'success')
+  showNotification(`${idsToDelete.length} đơn hàng đã được xóa thành công.`, "success")
 }
 
 // Cancel order function
 function cancelOrder(orderId) {
-  if (!confirm('Bạn có chắc chắn muốn hủy đơn hàng này?')) return
+  if (!confirm("Bạn có chắc chắn muốn hủy đơn hàng này?")) return
 
   const orderIndex = orders.findIndex((order) => order.id === orderId && order.userId === currentUser.id)
   if (orderIndex === -1) {
-    showNotification('Không tìm thấy đơn hàng để hủy.', 'error')
+    showNotification("Không tìm thấy đơn hàng để hủy.", "error")
     return
   }
 
-  if (orders[orderIndex].status === 'delivered' || orders[orderIndex].status === 'cancelled') {
-    showNotification('Đơn hàng không thể hủy.', 'warning')
+  if (orders[orderIndex].status === "delivered" || orders[orderIndex].status === "cancelled") {
+    showNotification("Đơn hàng không thể hủy.", "warning")
     return
   }
 
-  orders[orderIndex].status = 'cancelled'
-  localStorage.setItem('orders', JSON.stringify(orders))
-  showNotification('Đơn hàng đã được hủy thành công.', 'success')
+  orders[orderIndex].status = "cancelled"
+  localStorage.setItem("orders", JSON.stringify(orders))
+  showNotification("Đơn hàng đã được hủy thành công.", "success")
   loadUserOrderHistory()
 }
 
 // View order tracking function
 function viewOrderTracking(orderId) {
   const order = orders.find((order) => order.id === orderId && order.userId === currentUser.id)
-  console.log("viewOrderTracking order:", order)
   if (!order) {
-    showNotification('Không tìm thấy đơn hàng.', 'error')
+    showNotification("Không tìm thấy đơn hàng.", "error")
     return
   }
-  console.log("Delivery address in order:", order.deliveryAddress)
 
   // Simple tracking steps based on status
   const steps = [
-    { key: 'pending', label: 'Đang xử lý' },
-    { key: 'shipped', label: 'Đang giao hàng' },
-    { key: 'delivered', label: 'Đã giao hàng' },
+    { key: "pending", label: "Đang xử lý" },
+    { key: "shipped", label: "Đang giao hàng" },
+    { key: "delivered", label: "Đã giao hàng" },
   ]
 
   let currentStepIndex = steps.findIndex((step) => step.key === order.status)
   if (currentStepIndex === -1) currentStepIndex = 0
 
-  // Default warehouse location
+  // Default warehouse location (TP.HCM)
   const warehouseCoords = [10.762622, 106.660172]
   const warehouseName = "Kho trung tâm TP.HCM"
 
-  // Geocode delivery address to get coordinates
-  function geocodeAddress(address) {
-    console.log("Geocoding address:", address)
-    return fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Geocoding result:", data)
-        if (data && data.length > 0) {
-          return {
-            name: data[0].display_name,
-            coords: [parseFloat(data[0].lat), parseFloat(data[0].lon)],
-          }
-        } else {
-          console.warn("No geocoding results found for address:", address)
-          return null
-        }
-      })
-      .catch((error) => {
-        console.error("Geocoding error:", error)
-        return null
-      })
+  // Get delivery address from order
+  const deliveryAddress = order.deliveryAddress || "Địa chỉ chưa xác định"
+  const deliveryCoords = order.deliveryCoords || null
+
+  const deliveryInfo = {
+    departure: { name: warehouseName, coords: warehouseCoords },
+    currentLocation: { name: warehouseName, coords: warehouseCoords },
+    destination: {
+      name: deliveryAddress,
+      coords: deliveryCoords,
+    },
+    deliveryPerson: {
+      name: "Nguyễn Văn Gì Đó",
+      phone: "0123 456 789",
+      vehicle: "Xe máy số 59-TA 123.45",
+      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    },
+    route: [],
   }
 
-  // Async function to initialize map with dynamic destination
-  async function initMap() {
-    let destination = {
-      name: order.deliveryAddress || "Địa chỉ chưa xác định",
-      coords: null,
-    }
+  // Create route points
+  if (deliveryCoords) {
+    deliveryInfo.route = [
+      { name: warehouseName, coords: warehouseCoords },
+      { name: deliveryAddress, coords: deliveryCoords },
+    ]
+  } else {
+    deliveryInfo.route = [{ name: warehouseName, coords: warehouseCoords }]
+  }
 
-    // Remove basic length validation to be more flexible
-    if (!order.deliveryAddress) {
-      alert("Vui lòng nhập địa chỉ giao hàng.")
-      destination.coords = null
-    } else {
-      // Geocode delivery address
-      const geocoded = await geocodeAddress(order.deliveryAddress)
-      if (geocoded) {
-        destination = geocoded
-      } else {
-        alert("Không thể xác định vị trí địa chỉ giao hàng. Vui lòng kiểm tra lại địa chỉ.")
-        destination.coords = null
-      }
-    }
+  const trackingHtml = `
+    <div class="order-tracking-modal">
+      <h3>Tiến trình đơn hàng: ${order.id}</h3>
+      <div id="delivery-map" style="height: 300px; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--border-color);"></div>
+      
+      <div class="tracking-status-section">
+        <h4>Trạng thái đơn hàng</h4>
+        <div class="tracking-status-options">
+          <label class="tracking-status-option ${order.status === "pending" ? "active" : ""}">
+            <input type="radio" name="tracking-status" value="pending" ${order.status === "pending" ? "checked" : ""} disabled>
+            <span class="status-indicator"></span>
+            <span class="status-text">Đang xử lý</span>
+          </label>
+          <label class="tracking-status-option ${order.status === "shipped" ? "active" : ""}">
+            <input type="radio" name="tracking-status" value="shipped" ${order.status === "shipped" ? "checked" : ""} disabled>
+            <span class="status-indicator"></span>
+            <span class="status-text">Đang giao hàng</span>
+          </label>
+          <label class="tracking-status-option ${order.status === "delivered" ? "active" : ""}">
+            <input type="radio" name="tracking-status" value="delivered" ${order.status === "delivered" ? "checked" : ""} disabled>
+            <span class="status-indicator"></span>
+            <span class="status-text">Đã giao hàng</span>
+          </label>
+        </div>
+      </div>
 
-    const deliveryInfo = {
-      departure: { name: warehouseName, coords: warehouseCoords },
-      currentLocation: { name: warehouseName, coords: warehouseCoords },
-      destination: destination,
-      deliveryPerson: {
-        name: "Nguyễn Văn Tài",
-        phone: "0123 456 789",
-        vehicle: "Xe máy số 123-45",
-        avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-      },
-      route: [],
-    }
-
-    // If destination coords available, get detailed route from routing API
-    if (destination.coords) {
-      try {
-        const response = await fetch(
-          `https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf6248&start=${warehouseCoords[1]},${warehouseCoords[0]}&end=${destination.coords[1]},${destination.coords[0]}`
-        )
-        const data = await response.json()
-        if (data && data.features && data.features.length > 0) {
-          const coords = data.features[0].geometry.coordinates.map(coord => [coord[1], coord[0]])
-          deliveryInfo.route = [
-            { name: warehouseName, coords: warehouseCoords },
-            ...coords.map((c, i) => ({ name: i === coords.length - 1 ? destination.name : `Điểm ${i + 1}`, coords: c })),
-          ]
-        } else {
-          // Fallback to simple route if no detailed route
-          deliveryInfo.route = [
-            { name: warehouseName, coords: warehouseCoords },
-            { name: destination.name, coords: destination.coords },
-          ]
-        }
-      } catch (error) {
-        console.error("Routing API error:", error)
-        // Fallback to simple route on error
-        deliveryInfo.route = [
-          { name: warehouseName, coords: warehouseCoords },
-          { name: destination.name, coords: destination.coords },
-        ]
-      }
-    } else {
-      // No destination coords, fallback route only warehouse
-      deliveryInfo.route = [
-        { name: warehouseName, coords: warehouseCoords },
-      ]
-    }
-
-    let trackingHtml = `
-      <div class="order-tracking-modal">
-        <h3>Tiến trình đơn hàng: ${order.id}</h3>
-        <div id="delivery-map" style="height: 300px; border-radius: 8px; margin-bottom: 1rem;"></div>
-        <ul class="tracking-steps">
-    `
-
-    steps.forEach((step, index) => {
-      const isActive = index <= currentStepIndex
-      trackingHtml += `
-        <li class="tracking-step ${isActive ? 'active' : ''}">
-          <span class="step-label">${step.label}</span>
-          ${isActive ? '<i class="fas fa-check-circle"></i>' : '<i class="far fa-circle"></i>'}
-        </li>
-      `
-    })
-
-    trackingHtml += `
-      </ul>
       <div class="delivery-info">
         <h4>Thông tin người giao hàng</h4>
         <div class="delivery-person">
@@ -2918,22 +3166,26 @@ function viewOrderTracking(orderId) {
             <p><strong>Phương tiện:</strong> ${deliveryInfo.deliveryPerson.vehicle}</p>
           </div>
         </div>
+        
         <h4>Hành trình giao hàng</h4>
         <ol class="delivery-route">
-          ${deliveryInfo.route.map((location) => `<li>${location.name}</li>`).join('')}
+          <li>${warehouseName}</li>
+          ${deliveryCoords ? `<li>${deliveryAddress}</li>` : "<li>Địa chỉ giao hàng chưa xác định</li>"}
         </ol>
+        
         <p><strong>Vị trí hiện tại:</strong> ${deliveryInfo.currentLocation.name}</p>
       </div>
-      <button onclick="closeOrderTrackingModal()">Đóng</button>
+      
+      <button onclick="closeOrderTrackingModal()" class="close-tracking-btn">Đóng</button>
     </div>
   `
 
   // Create modal container if not exists
-  let modal = document.getElementById('order-tracking-modal')
+  let modal = document.getElementById("order-tracking-modal")
   if (!modal) {
-    modal = document.createElement('div')
-    modal.id = 'order-tracking-modal'
-    modal.className = 'modal'
+    modal = document.createElement("div")
+    modal.id = "order-tracking-modal"
+    modal.className = "modal"
     document.body.appendChild(modal)
   }
 
@@ -2941,63 +3193,85 @@ function viewOrderTracking(orderId) {
     <div class="modal-content order-tracking-modal-content">
       <span class="close-modal" onclick="closeOrderTrackingModal()">&times;</span>
       ${trackingHtml}
+    
     </div>
   `
-  modal.style.display = 'block'
-  document.body.style.overflow = 'hidden'
+  modal.style.display = "block"
+  document.body.style.overflow = "hidden"
 
   // Initialize Leaflet map after modal is displayed
   setTimeout(() => {
-    if (window.L) {
-      console.log("Delivery destination coords:", deliveryInfo.destination.coords)
-      const centerCoords = deliveryInfo.destination.coords || deliveryInfo.currentLocation.coords
-      const map = L.map('delivery-map').setView(centerCoords, 13)
+      if (window.L && document.getElementById("delivery-map")) {
+      const centerCoords = deliveryCoords || warehouseCoords
+      const map = L.map("delivery-map").setView(centerCoords, 13)
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
-        attribution: '&copy; OpenStreetMap contributors',
+        attribution: "&copy; OpenStreetMap contributors",
       }).addTo(map)
 
-      // Markers for route points
-      const markers = deliveryInfo.route.map((point) =>
-        L.marker(point.coords).bindPopup(point.name).addTo(map),
-      )
+      // Add warehouse marker
+      const warehouseMarker = L.marker(warehouseCoords)
+        .bindPopup(`<strong>Điểm xuất phát:</strong><br>${warehouseName}`)
+        .addTo(map)
 
-      // Add marker for destination if coords available
-      if (deliveryInfo.destination.coords) {
-        L.marker(deliveryInfo.destination.coords)
-          .bindPopup(`Địa chỉ giao hàng: ${deliveryInfo.destination.name}`)
+      // Add destination marker if coordinates available
+      if (deliveryCoords) {
+        const destinationMarker = L.marker(deliveryCoords)
+          .bindPopup(`<strong>Địa chỉ giao hàng:</strong><br>${deliveryAddress}`)
           .addTo(map)
+
+      // Remove existing route line drawing and replace with Leaflet Routing Machine
+      if (window.L.Routing) {
+        console.log("Leaflet Routing Machine detected, adding routing control")
+        L.Routing.control({
+          waypoints: [L.latLng(warehouseCoords[0], warehouseCoords[1]), L.latLng(deliveryCoords[0], deliveryCoords[1])],
+          routeWhileDragging: false,
+          showAlternatives: false,
+          addWaypoints: false,
+          draggableWaypoints: false,
+          fitSelectedRoutes: true,
+          createMarker: function() { return null; }, // Hide default markers since we have custom ones
+          lineOptions: {
+            styles: [{ color: "#2563eb", weight: 4, opacity: 0.8 }],
+          },
+        }).addTo(map)
+      } else {
+        console.log("Leaflet Routing Machine not detected, using simple polyline")
+        // Fallback to simple polyline if routing not available
+        const routeLine = L.polyline([warehouseCoords, deliveryCoords], {
+          color: "#2563eb",
+          weight: 4,
+          opacity: 0.8,
+        }).addTo(map)
       }
 
-      // Polyline for route
-      const routeCoords = deliveryInfo.route.map((point) => point.coords)
-      const polyline = L.polyline(routeCoords, { color: 'blue' }).addTo(map)
-
-      // Fit map bounds to route
-      map.fitBounds(polyline.getBounds(), { padding: [50, 50] })
+      // Fit map to show both points
+      const group = new L.featureGroup([warehouseMarker, destinationMarker])
+      map.fitBounds(group.getBounds().pad(0.1))
+      } else {
+        // Only warehouse marker, center on it
+        map.setView(warehouseCoords, 15)
+      }
     }
   }, 100)
 }
 
-  initMap()
-}
-
 function closeOrderTrackingModal() {
-  const modal = document.getElementById('order-tracking-modal')
+  const modal = document.getElementById("order-tracking-modal")
   if (modal) {
-    modal.style.display = 'none'
-    document.body.style.overflow = 'auto'
+    modal.style.display = "none"
+    document.body.style.overflow = "auto"
   }
 }
 
 // Load user settings content
 function loadUserSettings() {
-  const settingsTab = document.getElementById('user-settings-tab')
+  const settingsTab = document.getElementById("user-settings-tab")
   if (!settingsTab) return
 
   if (!currentUser) {
-    settingsTab.innerHTML = '<p>Vui lòng đăng nhập để xem cài đặt.</p>'
+    settingsTab.innerHTML = "<p>Vui lòng đăng nhập để xem cài đặt.</p>"
     return
   }
 
@@ -3006,15 +3280,15 @@ function loadUserSettings() {
     <div class="settings-content">
       <div class="settings-item">
         <label for="emailNotifications">Nhận thông báo qua email</label>
-        <input type="checkbox" id="emailNotifications" ${currentUser.emailNotifications ? 'checked' : ''}>
+        <input type="checkbox" id="emailNotifications" ${currentUser.emailNotifications ? "checked" : ""}>
       </div>
       <div class="settings-item">
         <label for="smsNotifications">Nhận thông báo qua SMS</label>
-        <input type="checkbox" id="smsNotifications" ${currentUser.smsNotifications ? 'checked' : ''}>
+        <input type="checkbox" id="smsNotifications" ${currentUser.smsNotifications ? "checked" : ""}>
       </div>
       <div class="settings-item">
         <label for="darkModeSetting">Chế độ tối</label>
-        <input type="checkbox" id="darkModeSetting" ${currentTheme === 'dark' ? 'checked' : ''}>
+        <input type="checkbox" id="darkModeSetting" ${currentTheme === "dark" ? "checked" : ""}>
       </div>
       <div class="profile-buttons">
         <button type="button" class="save-btn" onclick="saveUserSettings()">Lưu cài đặt</button>
@@ -3027,26 +3301,26 @@ function loadUserSettings() {
 
 // Save user settings changes
 function saveUserSettings() {
-  const emailNotifications = document.getElementById('emailNotifications')?.checked || false
-  const smsNotifications = document.getElementById('smsNotifications')?.checked || false
-  const darkModeSetting = document.getElementById('darkModeSetting')?.checked || false
+  const emailNotifications = document.getElementById("emailNotifications")?.checked || false
+  const smsNotifications = document.getElementById("smsNotifications")?.checked || false
+  const darkModeSetting = document.getElementById("darkModeSetting")?.checked || false
 
   if (!currentUser) return
 
   currentUser.emailNotifications = emailNotifications
   currentUser.smsNotifications = smsNotifications
-  localStorage.setItem('currentUser', JSON.stringify(currentUser))
+  localStorage.setItem("currentUser", JSON.stringify(currentUser))
 
   // Save settings in localStorage or apply immediately
   if (darkModeSetting) {
-    applyTheme('dark')
-    localStorage.setItem('theme', 'dark')
+    applyTheme("dark")
+    localStorage.setItem("theme", "dark")
   } else {
-    applyTheme('light')
-    localStorage.setItem('theme', 'light')
+    applyTheme("light")
+    localStorage.setItem("theme", "light")
   }
 
-  showNotification('Cài đặt đã được lưu!', 'success')
+  showNotification("Cài đặt đã được lưu!", "success")
 }
 
 function showForgotPassword() {
