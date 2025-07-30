@@ -207,27 +207,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="background-music.js"></script>
     <script>
-        // Apply theme toggle functionality on this page as well
-        document.addEventListener("DOMContentLoaded", () => {
-            const currentTheme = localStorage.getItem("theme") || "light";
-            document.documentElement.setAttribute("data-theme", currentTheme);
-            const icon = document.getElementById("theme-icon");
-            if (icon) {
-                icon.className = currentTheme === "light" ? "fas fa-moon" : "fas fa-sun";
-            }
-        });
-
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute("data-theme");
-            const newTheme = currentTheme === "light" ? "dark" : "light";
-            document.documentElement.setAttribute("data-theme", newTheme);
-            localStorage.setItem("theme", newTheme);
-            const icon = document.getElementById("theme-icon");
-            if (icon) {
-                icon.className = newTheme === "light" ? "fas fa-moon" : "fas fa-sun";
-            }
-        }
+        const bgMusic = new BackgroundMusic('https://www.bensound.com/bensound-music/bensound-sunny.mp3', {
+            volume: 0.3,
+            loop: true,
+        })
     </script>
 </body>
 
