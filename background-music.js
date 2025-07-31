@@ -13,21 +13,25 @@ class BackgroundMusic {
   }
 
   _setupAutoPlay() {
-    const playAudio = () => {
-      if (!this.isPlaying) {
-        this.audio.play().then(() => {
-          this.isPlaying = true
-          this._updateToggleButton()
-        }).catch((e) => {
-          console.log("Background music autoplay blocked:", e)
-        })
-      }
-      window.removeEventListener('click', playAudio)
-      window.removeEventListener('keydown', playAudio)
+  const playAudio = () => {
+    // CHỈ PHÁT NẾU controls ĐANG HIỂN THỊ
+    if (!this.isPlaying && this.controlsContainer.style.display !== 'none') {
+      this.audio.play().then(() => {
+        this.isPlaying = true
+        this._updateToggleButton()
+      }).catch((e) => {
+        console.log("Background music autoplay blocked:", e)
+      })
     }
-    window.addEventListener('click', playAudio)
-    window.addEventListener('keydown', playAudio)
+
+    window.removeEventListener('click', playAudio)
+    window.removeEventListener('keydown', playAudio)
   }
+
+  window.addEventListener('click', playAudio)
+  window.addEventListener('keydown', playAudio)
+}
+
 
   play() {
     if (!this.isPlaying) {
