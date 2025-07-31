@@ -1,0 +1,587 @@
+const products = [
+  {
+    id: 1,
+    name: "MacBook Pro M3",
+    description: "Laptop cao cấp với chip M3 mạnh mẽ, màn hình Retina 14 inch, RAM 16GB, SSD 512GB",
+    fullDescription: `MacBook Pro M3 14 inch là chiếc laptop cao cấp được thiết kế dành cho các chuyên gia sáng tạo và người dùng có nhu cầu hiệu năng cao. Với chip M3 thế hệ mới nhất của Apple, máy mang lại hiệu năng vượt trội và khả năng tiết kiệm pin đáng kinh ngạc.
+
+Màn hình Liquid Retina XDR 14.2 inch với độ phân giải 3024 x 1964 pixels mang đến trải nghiệm hình ảnh sống động, màu sắc chính xác và độ tương phản cao. Công nghệ ProMotion với tần số quét lên đến 120Hz đảm bảo mọi thao tác đều mượt mà.
+
+Hệ thống âm thanh 6 loa với công nghệ Spatial Audio tạo ra không gian âm thanh sống động. Camera FaceTime HD 1080p với tính năng Center Stage giúp bạn luôn nằm trong khung hình khi video call.`,
+    price: 45000000,
+    originalPrice: 50000000,
+    image: "https://mac365.vn/wp-content/uploads/2024/03/3-12.png",
+    images: [
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook-pro-16-inch-m3-max-2023_2_.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_562.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_8__2.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook-pro-16-inch-m3-max-2023_8_.png",
+    ],
+    category: "laptop",
+    badge: "Hot",
+    rating: 4.8,
+    reviewCount: 124,
+    inStock: true,
+    stockQuantity: 15,
+    sku: "MBP-M3-14-512",
+    brand: "Apple",
+    warranty: "12 tháng",
+    specifications: {
+      "Bộ xử lý": "Apple M3 8-core CPU",
+      "Bộ nhớ": "16GB Unified Memory",
+      "Lưu trữ": "512GB SSD",
+      "Màn hình": "14.2-inch Liquid Retina XDR",
+      "Độ phân giải": "3024 x 1964 pixels",
+      "Card đồ họa": "10-core GPU",
+      Pin: "Lên đến 18 giờ",
+      "Trọng lượng": "1.6 kg",
+      "Kích thước": "31.26 x 22.12 x 1.55 cm",
+      "Hệ điều hành": "macOS Sonoma",
+      "Cổng kết nối": "3x Thunderbolt 4, HDMI, SDXC, MagSafe 3",
+      Webcam: "1080p FaceTime HD camera",
+      "Âm thanh": "6-speaker sound system",
+      "Bàn phím": "Magic Keyboard vi Touch ID",
+    },
+    colors: ["Space Gray", "Silver"],
+    storage: ["512GB", "1TB", "2TB"],
+    memory: ["16GB", "32GB", "64GB"],
+    features: ["Touch ID", "MagSafe 3", "Thunderbolt 4", "ProMotion", "Spatial Audio"],
+    tags: ["Laptop", "Apple", "M3", "Professional", "Creative"],
+  },
+
+  {
+    id: 2,
+    name: "iPhone 15 Pro Max",
+    description: "Điện thoại thông minh cao cấp với camera 48MP và chip A17 Pro, màn hình 6.7 inch",
+    fullDescription: `iPhone 15 Pro Max là flagship mới nhất của Apple với thiết kế titanium cao cấp và hiệu năng đột phá từ chip A17 Pro. Màn hình Super Retina XDR 6.7 inch với Dynamic Island mang đến trải nghiệm tương tác hoàn toàn mới.
+
+Hệ thống camera Pro với cảm biến chính 48MP, camera Ultra Wide 12MP và camera Telephoto 12MP với zoom quang học 5x. Tính năng Action Button có thể tùy chỉnh thay thế cho switch im lặng truyền thống.
+
+Cổng USB-C với hỗ trợ USB 3 cho tốc độ truyền dữ liệu nhanh chóng. Pin được cải thiện đáng kể với thời gian sử dụng lên đến 29 giờ xem video.`,
+    price: 32000000,
+    originalPrice: 35000000,
+    image:
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-pro-max_2__5_2_1_1.jpg",
+    images: [
+      "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg",
+      "https://i.ytimg.com/vi/QCvcF94NmGs/maxresdefault.jpg",
+      "https://hanoicomputercdn.com/media/product/76344_white_titanium__1_.jpg",
+    ],
+    category: "phone",
+    badge: "New",
+    rating: 4.9,
+    reviewCount: 89,
+    inStock: true,
+    stockQuantity: 8,
+    sku: "IP15PM-256-BTI",
+    brand: "Apple",
+    warranty: "12 tháng",
+    specifications: {
+      Chip: "A17 Pro chip",
+      "Màn hình": "6.7-inch Super Retina XDR",
+      "Độ phân giải": "2796 x 1290 pixels",
+      "Camera chính": "48MP Main camera",
+      "Camera phụ": "12MP Ultra Wide, 12MP Telephoto",
+      Zoom: "5x optical zoom",
+      "Lưu trữ": "256GB",
+      Pin: "Lên đến 29 giờ video",
+      "Chất liệu": "Titanium",
+      "5G": "Có",
+      "Kháng nước": "IP68",
+      "Hệ điều hành": "iOS 17",
+      "Cổng sạc": "USB-C",
+      "Sạc không dây": "MagSafe, Qi",
+    },
+    colors: ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+    storage: ["128GB", "256GB", "512GB", "1TB"],
+    features: ["Face ID", "Action Button", "Dynamic Island", "MagSafe", "5G"],
+    tags: ["iPhone", "Apple", "A17 Pro", "Titanium", "Pro Camera"],
+  },
+
+  {
+    id: 3,
+    name: "AirPods Pro 2",
+    description: "Tai nghe không dây với công nghệ chống ồn chủ động, âm thanh không gian",
+    fullDescription: `AirPods Pro thế hệ thứ 2 với chip H2 mang đến trải nghiệm âm thanh hoàn toàn mới. Công nghệ Active Noise Cancellation được cải tiến giúp loại bỏ tiếng ồn hiệu quả gấp đôi so với thế hệ trước.
+
+Adaptive Transparency cho phép bạn nghe âm thanh xung quanh một cách tự nhiên. Personalized Spatial Audio với dynamic head tracking tạo ra trải nghiệm âm thanh 3D sống động.
+
+Case sạc MagSafe với loa tích hợp giúp dễ dàng tìm kiếm khi thất lạc. Thời lượng pin lên đến 6 giờ nghe nhạc và 30 giờ với case sạc.`,
+    price: 6500000,
+    originalPrice: 7000000,
+    image:
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FMT_WHH?wid=750&hei=556&fmt=jpeg&qlt=90&.v=1724041668836",
+    images: [
+      "https://media.wired.com/photos/671577232009d044328f83e0/master/w_2560%2Cc_limit/AirPods%2520Pro%25202%2520Abstract%2520Background%2520102024%2520SOURCE%2520Apple.jpg",
+      "https://phukiendidong.com/wp-content/uploads/2022/09/airpods-pro-2nd-generation-1.jpg",
+    ],
+    category: "accessory",
+    badge: "Sale",
+    rating: 4.7,
+    reviewCount: 256,
+    inStock: true,
+    stockQuantity: 25,
+    sku: "APP2-WHITE",
+    brand: "Apple",
+    warranty: "12 tháng",
+    specifications: {
+      Chip: "H2 chip",
+      "Pin tai nghe": "Lên đến 6 giờ nghe nhạc",
+      "Pin case": "Lên đến 30 giờ tổng cộng",
+      "Kết nối": "Bluetooth 5.3",
+      "Tính năng": "Active Noise Cancellation",
+      "Kháng nước": "IPX4",
+      "Trọng lượng": "5.3g mỗi tai",
+      "Cảm biến": "Dual beamforming microphones",
+      "Điều khiển": "Force sensor",
+      Sạc: "Lightning, MagSafe, Qi wireless",
+      "Tương thích": "iPhone, iPad, Mac, Apple Watch",
+    },
+    colors: ["White"],
+    features: ["Active Noise Cancellation", "Spatial Audio", "MagSafe", "Find My"],
+    tags: ["AirPods", "Wireless", "Noise Cancellation", "H2 Chip"],
+  },
+
+  {
+    id: 4,
+    name: "Dell XPS 13",
+    description: "Laptop mỏng nhẹ với màn hình InfinityEdge 13.3 inch, Intel Core i7",
+    fullDescription: `Dell XPS 13 là laptop ultrabook cao cấp với thiết kế mỏng nhẹ và hiệu năng mạnh mẽ. Màn hình InfinityEdge 13.4 inch với viền siêu mỏng mang đến trải nghiệm hình ảnh tuyệt vời trong form factor nhỏ gọn.
+
+Bộ xử lý Intel Core i7 thế hệ 13 với kiến trúc hybrid mới mang lại hiệu năng cao và tiết kiệm pin. RAM LPDDR5 16GB và SSD NVMe 512GB đảm bảo tốc độ xử lý nhanh chóng.
+
+Bàn phím có đèn nền với key travel thoải mái. Trackpad precision lớn hỗ trợ đầy đủ gesture của Windows 11. Hệ thống tản nhiệt thông minh giữ máy luôn mát mẻ.`,
+    price: 28000000,
+    originalPrice: 32000000,
+    image: "https://www.laptopvip.vn/images/ab__webp/thumbnails/800/800/detailed/10/71jxN6pEeNL._SL1496_.png.webp",
+    images: [
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop_dell_xps_13_9350_xps9350-u5ia165w11gr-fp_-_1.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop_dell_xps_13_9350_71058714_-_1.png",
+    ],
+    category: "laptop",
+    rating: 4.6,
+    reviewCount: 78,
+    inStock: true,
+    stockQuantity: 12,
+    sku: "XPS13-I7-512",
+    brand: "Dell",
+    warranty: "24 tháng",
+    specifications: {
+      "Bộ xử lý": "Intel Core i7-1360P",
+      "Bộ nhớ": "16GB LPDDR5",
+      "Lưu trữ": "512GB SSD NVMe",
+      "Màn hình": "13.4-inch FHD+ InfinityEdge",
+      "Độ phân giải": "1920 x 1200 pixels",
+      "Card đồ họa": "Intel Iris Xe Graphics",
+      Pin: "Lên đến 12 giờ",
+      "Trọng lượng": "1.24 kg",
+      "Kích thước": "29.5 x 19.9 x 1.49 cm",
+      "Hệ điều hành": "Windows 11 Home",
+      "Cổng kết nối": "2x Thunderbolt 4, microSD",
+      Webcam: "720p HD camera",
+      "Âm thanh": "Stereo speakers",
+      "Bàn phím": "Backlit keyboard",
+    },
+    colors: ["Platinum Silver", "Graphite"],
+    storage: ["512GB", "1TB"],
+    memory: ["16GB", "32GB"],
+    features: ["InfinityEdge Display", "Thunderbolt 4", "Backlit Keyboard", "Windows Hello"],
+    tags: ["Dell", "XPS", "Ultrabook", "Intel", "Portable"],
+  },
+
+  {
+    id: 5,
+    name: "Samsung Galaxy S24 Ultra",
+    description: "Flagship Android với S Pen và camera zoom 100x, màn hình Dynamic AMOLED 6.8 inch",
+    fullDescription: `Samsung Galaxy S24 Ultra là smartphone flagship cao cấp nhất của Samsung với S Pen tích hợp và hệ thống camera zoom 100x Space Zoom. Màn hình Dynamic AMOLED 2X 6.8 inch với độ sáng lên đến 2600 nits.
+
+Chip Snapdragon 8 Gen 3 for Galaxy được tối ưu riêng mang lại hiệu năng vượt trội. Camera chính 200MP với OIS, camera telephoto periscope 50MP zoom 5x quang học và 100x kỹ thuật số.
+
+S Pen với độ trễ siêu thấp cho trải nghiệm viết và vẽ tự nhiên. Pin 5000mAh với sạc nhanh 45W và sạc không dây 15W. Khung titanium cao cấp với kháng nước IP68.`,
+    price: 30000000,
+    originalPrice: 33000000,
+    image:
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/s/ss-s24-ultra-xam-222.png",
+    images: [
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung_galaxy_s24_ultra_256gb_-_1.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung_galaxy_s24_ultra_256gb_-_2.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung_galaxy_s24_ultra_256gb_-_12_2.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung_galaxy_s24_ultra_1tb_-_13.png",
+    ],
+    category: "phone",
+    badge: "Hot",
+    rating: 4.8,
+    reviewCount: 145,
+    inStock: true,
+    stockQuantity: 20,
+    sku: "S24U-256-TB",
+    brand: "Samsung",
+    warranty: "12 tháng",
+    specifications: {
+      "Bộ xử lý": "Snapdragon 8 Gen 3 for Galaxy",
+      "Màn hình": "6.8-inch Dynamic AMOLED 2X",
+      "Độ phân giải": "3120 x 1440 pixels",
+      "Camera chính": "200MP với OIS",
+      "Camera phụ": "50MP Telephoto, 12MP Ultra Wide, 12MP Telephoto",
+      Zoom: "100x Space Zoom",
+      RAM: "12GB",
+      "Lưu trữ": "256GB",
+      Pin: "5000mAh",
+      Sạc: "45W có dây, 15W không dây",
+      "S Pen": "Tích hợp sẵn",
+      "Kháng nước": "IP68",
+      "Hệ điều hành": "Android 14 với One UI 6.1",
+      "5G": "Có",
+      "Chất liệu": "Titanium frame",
+    },
+    colors: ["Titanium Black", "Titanium Gray", "Titanium Violet", "Titanium Yellow"],
+    storage: ["256GB", "512GB", "1TB"],
+    features: ["S Pen", "100x Zoom", "AI Features", "DeX Mode", "5G"],
+    tags: ["Samsung", "Galaxy", "S Pen", "Zoom Camera", "Titanium"],
+  },
+
+  {
+    id: 6,
+    name: "Magic Mouse",
+    description: "Chuột không dây với bề mặt cảm ứng đa điểm, thiết kế tối giản",
+    fullDescription: `Magic Mouse là chuột không dây cao cấp của Apple với thiết kế tối giản và bề mặt Multi-Touch. Kết nối Bluetooth ổn định với độ trễ thấp, phù hợp cho công việc và giải trí.
+
+Bề mặt cảm ứng hỗ trợ đầy đủ các gesture như scroll, swipe, zoom giúp tăng hiệu quả công việc. Pin lithium-ion tích hợp có thể sử dụng lên đến 1 tháng với một lần sạc.
+
+Thiết kế ergonomic thoải mái cho cả người thuận tay trái và phải. Tương thích hoàn hảo với Mac và iPad, hỗ trợ một số tính năng trên Windows.`,
+    price: 2500000,
+    originalPrice: 2800000,
+    image:
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53?wid=4000&hei=4000&fmt=jpeg&qlt=90&.v=1730508286345",
+    images: [
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=QytENXB3MzdYRFA4RU1McS9kQ1d6VlZya2lKWlJmUEwrYndWOTJiVWJWQUYwVmtIbGRkS25RMVpBRlo0bk5DUStteWFnS2JDbkxFb1JqRG5KS1RPUWc",
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1730508286345",
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1730508286345",
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK53_AV4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1730508286345",
+    ],
+    category: "accessory",
+    rating: 4.3,
+    reviewCount: 67,
+    inStock: true,
+    stockQuantity: 30,
+    sku: "MM-WHITE",
+    brand: "Apple",
+    warranty: "12 tháng",
+    specifications: {
+      "Kết nối": "Bluetooth 5.0",
+      Pin: "Lithium-ion có thể sạc lại",
+      "Thời lượng pin": "Lên đến 1 tháng",
+      "Tương thích": "Mac, iPad, Windows (hạn chế)",
+      "Cảm ứng": "Multi-Touch surface",
+      "Trọng lượng": "99g",
+      "Kích thước": "11.35 x 5.71 x 2.16 cm",
+      "Cảm biến": "Laser tracking",
+      DPI: "1300 DPI",
+      Sạc: "Lightning cable",
+      "Màu sắc": "White, Black",
+    },
+    colors: ["White", "Black"],
+    features: ["Multi-Touch", "Bluetooth", "Rechargeable", "Ambidextrous"],
+    tags: ["Apple", "Mouse", "Wireless", "Multi-Touch"],
+  },
+
+  {
+    id: 7,
+    name: "iPad Pro 12.9",
+    description: "Máy tính bảng chuyên nghiệp với chip M2 và màn hình Liquid Retina XDR 12.9 inch",
+    fullDescription: `iPad Pro 12.9 inch với chip M2 mang đến hiệu năng laptop trong thân hình tablet. Màn hình Liquid Retina XDR 12.9 inch với công nghệ mini-LED cho độ tương phản vô cực và màu sắc chính xác.
+
+Chip M2 8-core CPU và 10-core GPU xử lý mượt mà mọi tác vụ từ chỉnh sửa video 4K đến render 3D. Hỗ trợ Apple Pencil thế hệ 2 với độ trễ siêu thấp cho trải nghiệm vẽ tự nhiên.
+
+Camera TrueDepth với Center Stage và camera sau 12MP với LiDAR Scanner. Kết nối 5G và Wi-Fi 6E cho tốc độ mạng nhanh chóng. Magic Keyboard và Apple Pencil bán riêng.`,
+    price: 25000000,
+    originalPrice: 28000000,
+    image:
+      "https://product.hstatic.net/1000259254/product/ipad_pro_12.9-inch__space_grey_bbfeb3c1a1964da2a34162e6c556616d_master.jpg",
+    images: [
+      "https://cdn.tgdd.vn/Products/Images/522/294105/Slider/ipad-pro-m2-12-9-inch638035039263101931.jpg",
+      "https://cdn.tgdd.vn/Products/Images/522/294105/ipad-pro-m2-wifi-bac-2-750x500.jpg",
+      "https://cdn.tgdd.vn/Products/Images/522/294105/ipad-pro-m2-wifi-bac-4-750x500.jpg",
+    ],
+    category: "laptop",
+    badge: "New",
+    rating: 4.9,
+    reviewCount: 92,
+    inStock: true,
+    stockQuantity: 18,
+    sku: "IPP129-M2-128",
+    brand: "Apple",
+    warranty: "12 tháng",
+    specifications: {
+      Chip: "Apple M2",
+      "Màn hình": "12.9-inch Liquid Retina XDR",
+      "Độ phân giải": "2732 x 2048 pixels",
+      "Lưu trữ": "128GB",
+      "Camera sau": "12MP Wide, 10MP Ultra Wide",
+      "Camera trước": "12MP TrueDepth",
+      LiDAR: "Có",
+      Pin: "Lên đến 10 giờ",
+      "Kết nối": "Wi-Fi 6E, 5G (tùy chọn)",
+      "Apple Pencil": "Hỗ trợ thế hệ 2",
+      Cổng: "Thunderbolt / USB 4",
+      "Âm thanh": "4 speakers",
+      "Trọng lượng": "682g (Wi-Fi)",
+      "Hệ điều hành": "iPadOS 17",
+    },
+    colors: ["Space Gray", "Silver"],
+    storage: ["128GB", "256GB", "512GB", "1TB", "2TB"],
+    connectivity: ["Wi-Fi", "Wi-Fi + Cellular"],
+    features: ["M2 Chip", "Liquid Retina XDR", "Apple Pencil", "5G", "LiDAR"],
+    tags: ["iPad", "Pro", "M2", "Tablet", "Creative"],
+  },
+
+  {
+    id: 8,
+    name: "Sony WH-1000XM5",
+    description: "Tai nghe chụp tai cao cấp với chống ồn hàng đầu, âm thanh Hi-Res",
+    fullDescription: `Sony WH-1000XM5 là tai nghe chống ồn hàng đầu thế giới với công nghệ V1 processor và dual noise sensor. Thiết kế mới nhẹ hơn và thoải mái hơn cho việc đeo lâu dài.
+
+Driver 30mm mới được thiết kế đặc biệt cho âm thanh Hi-Res với dải tần rộng. Công nghệ DSEE Extreme nâng cấp chất lượng âm thanh kỹ thuật số lên gần Hi-Res.
+
+Pin 30 giờ với sạc nhanh 3 phút cho 3 giờ sử dụng. Multipoint connection kết nối đồng thời 2 thiết bị. Speak-to-Chat tự động tạm dừng nhạc khi bạn nói chuyện.`,
+    price: 8500000,
+    originalPrice: 9500000,
+    image: "https://www.sony.com.vn/image/6145c1d32e6ac8e63a46c912dc33c5bb?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
+    images: [
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_172_2.png",
+      "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/a/tai-nghe-chup-tai-sony-wh-1000xm5-ksp-2.png",
+    ],
+    category: "accessory",
+    badge: "Sale",
+    rating: 4.8,
+    reviewCount: 189,
+    inStock: true,
+    stockQuantity: 22,
+    sku: "WH1000XM5-B",
+    brand: "Sony",
+    warranty: "12 tháng",
+    specifications: {
+      Driver: "30mm dynamic drivers",
+      "Chống ồn": "Industry-leading với V1 processor",
+      Pin: "Lên đến 30 giờ",
+      "Sạc nhanh": "3 phút = 3 giờ sử dụng",
+      "Kết nối": "Bluetooth 5.2",
+      Codec: "LDAC, SBC, AAC",
+      "Trọng lượng": "250g",
+      "Tần số": "4Hz - 40kHz",
+      Microphone: "Dual noise sensor",
+      "Điều khiển": "Touch control",
+      "Tính năng": "Speak-to-Chat, Quick Attention",
+      App: "Sony Headphones Connect",
+    },
+    colors: ["Black", "Silver"],
+    features: ["Noise Cancelling", "Hi-Res Audio", "30H Battery", "Quick Charge", "Multipoint"],
+    tags: ["Sony", "Headphones", "Noise Cancelling", "Hi-Res", "Wireless"],
+  },
+
+  {
+    id: 9,
+    name: "Keychron K8 Mechanical Keyboard",
+    description: "Bàn phím cơ không dây với switch Gateron, thiết kế tenkeyless, RGB backlight",
+    fullDescription: `Keychron K8 là bàn phím cơ không dây tenkeyless (87 phím) với switch Gateron chất lượng cao, phù hợp cho cả công việc và chơi game. Thiết kế nhỏ gọn, dễ dàng mang theo và sử dụng với nhiều thiết bị qua Bluetooth hoặc cáp USB-C.
+
+Bàn phím hỗ trợ RGB backlight với nhiều chế độ ánh sáng tùy chỉnh. Keychron K8 có pin dung lượng lớn cho thời gian sử dụng lên đến 72 giờ khi bật đèn nền. Hỗ trợ đa nền tảng Windows, macOS, iOS và Android.
+
+Keycap làm từ PBT bền bỉ, chống mờ chữ, mang lại trải nghiệm gõ phím thoải mái và chính xác.`,
+    price: 2500000,
+    originalPrice: 2800000,
+    image: "https://www.keychron.com/cdn/shop/products/Keychron-K8-tenkeyless-wireless-mechanical-keyboard-for-Mac-Windows-iOS-RGB-white-backlight-with-gateron-Optical-switch-brown..jpg?v=1657360255&width=1214",
+    images: [
+      "https://owlgaming.vn/wp-content/uploads/2021/01/ban-phim-co-keychron-k8-5.jpg",
+      "https://owlgaming.vn/wp-content/uploads/2021/01/Keychron-K8-keyboard-2-1.jpg",
+      "https://owlgaming.vn/wp-content/uploads/2021/01/Keychron-K8-keyboard-3.jpg",
+    ],
+    category: "keyboard",
+    rating: 4.7,
+    reviewCount: 320,
+    inStock: true,
+    stockQuantity: 40,
+    sku: "K8-GATERON-BLK",
+    brand: "Keychron",
+    warranty: "12 tháng",
+    specifications: {
+      "Loại switch": "Gateron Mechanical Switch",
+      "Kết nối": "Bluetooth 5.1, USB-C có dây",
+      "Số phím": "87 (Tenkeyless)",
+      "Đèn nền": "RGB backlight với nhiều chế độ",
+      Pin: "4000mAh, lên đến 72 giờ sử dụng",
+      "Chất liệu keycap": "PBT Double-shot",
+      "Tương thích": "Windows, macOS, iOS, Android",
+      "Kích thước": "368 x 133 x 38 mm",
+      "Trọng lượng": "830g",
+    },
+    colors: ["Black", "White"],
+    features: ["Wireless", "Mechanical Switch", "RGB Backlight", "Multi-Device"],
+    tags: ["Keyboard", "Mechanical", "Wireless", "RGB", "Keychron"],
+  },
+
+  {
+    id: 10,
+    name: "NVIDIA GeForce RTX 4070",
+    description: "Card đồ họa hiệu năng cao với kiến trúc Ada Lovelace, 12GB GDDR6X VRAM",
+    fullDescription: `NVIDIA GeForce RTX 4070 là card đồ họa thế hệ mới dựa trên kiến trúc Ada Lovelace, mang lại hiệu năng vượt trội cho chơi game và xử lý đồ họa chuyên nghiệp. Với 12GB bộ nhớ GDDR6X, RTX 4070 hỗ trợ ray tracing và DLSS 3.
+
+Card hỗ trợ đa dạng cổng kết nối như HDMI 2.1 và DisplayPort 1.4a, tương thích với các hệ thống PC hiện đại. Thiết kế tản nhiệt hiệu quả giúp giữ nhiệt độ ổn định trong quá trình sử dụng.
+
+RTX 4070 là lựa chọn lý tưởng cho game thủ và nhà sáng tạo nội dung cần hiệu năng cao và độ ổn định.`,
+    price: 15000000,
+    originalPrice: 17000000,
+    image: "https://anphat.com.vn/media/product/49188_vga_gigabyte_rtx_4070_windforce_2x_oc_v2_12gb__1_.jpg",
+    images: [
+      "https://product.hstatic.net/200000722513/product/geforce_rtx__4070_super_windforce_oc_12g-03_5438cc9af24c44f686feec7432580cc7_master.png",
+      "https://product.hstatic.net/200000722513/product/geforce_rtx__4070_super_windforce_oc_12g-06_73956709fd274beeb1d47150d4c3e704_master.png",
+      "https://product.hstatic.net/200000722513/product/geforce_rtx__4070_super_windforce_oc_12g-07_3d12dc37ac2743999720f00f7db43563_master.png",
+      "https://product.hstatic.net/200000722513/product/geforce_rtx__4070_super_windforce_oc_12g-08_7b52c6e9c41f40a594edbbf147d881c0_master.png",
+    ],
+    category: "graphics card",
+    rating: 4.9,
+    reviewCount: 210,
+    inStock: true,
+    stockQuantity: 25,
+    sku: "RTX4070-12GB",
+    brand: "NVIDIA",
+    warranty: "24 tháng",
+    specifications: {
+      "Kiến trúc": "Ada Lovelace",
+      "Bộ nhớ": "12GB GDDR6X",
+      "Tốc độ xung nhịp": "2.61 GHz Boost Clock",
+      "Cổng kết nối": "1x HDMI 2.1, 3x DisplayPort 1.4a",
+      "Ray Tracing": "Có",
+      "DLSS": "DLSS 3",
+      "TDP": "200W",
+      "Kích thước": "267 x 112 x 40 mm",
+      "Trọng lượng": "1.2 kg",
+    },
+    colors: ["Black"],
+    features: ["Ray Tracing", "DLSS 3", "PCIe 4.0", "Efficient Cooling"],
+    tags: ["Graphics Card", "NVIDIA", "RTX 4070", "Gaming", "Ray Tracing"],
+  },
+
+  {
+    id: 11,
+    name: "Corsair Vengeance LPX 32GB DDR4 RAM",
+    description: "Bộ nhớ RAM DDR4 hiệu năng cao, 32GB (2x16GB), 3200MHz, thiết kế tản nhiệt nhôm",
+    fullDescription: `Corsair Vengeance LPX 32GB DDR4 RAM là bộ nhớ hiệu năng cao dành cho máy tính để bàn, với tốc độ 3200MHz và thiết kế tản nhiệt bằng nhôm giúp duy trì nhiệt độ ổn định khi hoạt động.
+
+Bộ nhớ gồm 2 thanh 16GB, hỗ trợ Intel và AMD platforms, tương thích với các bo mạch chủ phổ biến. Thiết kế thấp giúp phù hợp với các hệ thống có không gian hạn chế.
+
+Vengeance LPX là lựa chọn tối ưu cho game thủ và người dùng chuyên nghiệp cần hiệu năng ổn định và khả năng nâng cấp dễ dàng.`,
+    price: 3200000,
+    originalPrice: 3500000,
+    image: "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/CMK32GX4M2E3200C16/Gallery/VENG_LPX_BLK_01.webp",
+    images: [
+      "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/CMK32GX4M2E3200C16/Gallery/VENG_LPX_BLK_02.webp",
+      "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/CMK32GX4M2E3200C16/Gallery/VENG_LPX_BLK_03.webp",
+    ],
+    category: "ram",
+    rating: 4.8,
+    reviewCount: 180,
+    inStock: true,
+    stockQuantity: 50,
+    sku: "CMK32GX4M2B3200C16",
+    brand: "Corsair",
+    warranty: "36 tháng",
+    specifications: {
+      "Loại RAM": "DDR4",
+      "Dung lượng": "32GB (2x16GB)",
+      "Tốc độ": "3200MHz",
+      "Điện áp": "1.35V",
+      "Thiết kế": "Tản nhiệt nhôm",
+      "Tương thích": "Intel, AMD",
+      "Kích thước": "133.35 x 34.04 x 7 mm",
+      "Trọng lượng": "40g mỗi thanh",
+    },
+    colors: ["Black"],
+    features: ["High Performance", "Aluminum Heat Spreader", "Low Profile", "Overclockable"],
+    tags: ["RAM", "Corsair", "DDR4", "Gaming", "Performance"],
+  },
+
+  {
+    id: 12,
+    name: "Samsung 970 EVO Plus 1TB NVMe SSD",
+    description: "Ổ cứng SSD NVMe hiệu năng cao, 1TB, tốc độ đọc 3500MB/s, ghi 3300MB/s",
+    fullDescription: `Samsung 970 EVO Plus 1TB là ổ cứng SSD NVMe hiệu năng cao dành cho máy tính để bàn và laptop, với tốc độ đọc lên đến 3500MB/s và ghi 3300MB/s, giúp tăng tốc độ khởi động và tải ứng dụng.
+
+Ổ cứng sử dụng công nghệ V-NAND 3-bit MLC và bộ điều khiển Phoenix, đảm bảo độ bền và hiệu suất ổn định. Hỗ trợ phần mềm Samsung Magician để quản lý và tối ưu hóa hiệu năng.
+
+970 EVO Plus là lựa chọn hàng đầu cho người dùng cần nâng cấp lưu trữ với tốc độ cao và độ tin cậy.`,
+    price: 3200000,
+    originalPrice: 3500000,
+    image: "https://images.samsung.com/is/image/samsung/p6pim/vn/mz-v7s1t0bw/gallery/vn-970-evoplus-nvme-m2-ssd-mz-v7s1t0bw-539193837?$684_547_JPG$",
+    images: [
+      "https://images.samsung.com/is/image/samsung/p6pim/vn/mz-v7s1t0bw/gallery/vn-970-evoplus-nvme-m2-ssd-mz-v7s1t0bw-539193806?$684_547_JPG$",
+      "https://images.samsung.com/is/image/samsung/p6pim/vn/mz-v7s1t0bw/gallery/vn-970-evoplus-nvme-m2-ssd-mz-v7s1t0bw-539193807?$684_547_JPG$",
+      "https://images.samsung.com/is/image/samsung/p6pim/vn/mz-v7s1t0bw/gallery/vn-970-evoplus-nvme-m2-ssd-mz-v7s1t0bw-539193809?$684_547_JPG$",
+      "https://images.samsung.com/is/image/samsung/p6pim/vn/mz-v7s1t0bw/gallery/vn-970-evoplus-nvme-m2-ssd-mz-v7s1t0bw-539193812?$684_547_JPG$",
+    ],
+    category: "ssd",
+    rating: 4.9,
+    reviewCount: 220,
+    inStock: true,
+    stockQuantity: 60,
+    sku: "MZ-V7S1T0B",
+    brand: "Samsung",
+    warranty: "5 năm",
+    specifications: {
+      "Loại ổ cứng": "NVMe M.2 SSD",
+      "Dung lượng": "1TB",
+      "Tốc độ đọc": "3500MB/s",
+      "Tốc độ ghi": "3300MB/s",
+      "Bộ điều khiển": "Phoenix Controller",
+      "Công nghệ NAND": "V-NAND 3-bit MLC",
+      "Kích thước": "80.15 x 22.15 x 2.38 mm",
+      "Trọng lượng": "8g",
+    },
+    colors: ["Black"],
+    features: ["High Speed", "Reliable", "NVMe", "M.2 Form Factor"],
+    tags: ["SSD", "Samsung", "NVMe", "Storage", "Performance"],
+  }
+]
+
+// Sample reviews data
+const reviews = {
+  1: [
+    {
+      id: 1,
+      userName: "Nguyễn Văn A",
+      rating: 5,
+      date: "2024-01-15",
+      content: "Sản phẩm tuyệt vời! Hiệu năng mạnh mẽ, thiết kế đẹp. Rất hài lòng với việc mua hàng.",
+      helpful: 12,
+      reported: 0,
+    },
+    {
+      id: 2,
+      userName: "Trần Thị B",
+      rating: 4,
+      date: "2024-01-10",
+      content: "Chất lượng tốt, giao hàng nhanh. Giá hơi cao nhưng xứng đáng.",
+      helpful: 8,
+      reported: 0,
+    },
+  ],
+  2: [
+    {
+      id: 3,
+      userName: "Lê Văn C",
+      rating: 5,
+      date: "2024-01-12",
+      content: "Camera cực kỳ ấn tượng! Chụp ảnh đẹp, quay video mượt mà.",
+      helpful: 15,
+      reported: 0,
+    },
+  ],
+}
+
+// Coupon codes
+const coupons = {
+  WELCOME10: { discount: 0.1, minOrder: 1000000, description: "Giảm 10% cho đơn hàng từ 1 triệu" },
+  SAVE50K: { discount: 50000, minOrder: 2000000, description: "Giảm 50K cho đơn hàng từ 2 triệu" },
+  NEWUSER: { discount: 0.15, minOrder: 500000, description: "Giảm 15% cho khách hàng mới" },
+  FLASH20: { discount: 0.2, minOrder: 3000000, description: "Flash sale - Giảm 20%" },
+}
