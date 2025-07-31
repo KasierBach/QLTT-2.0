@@ -7,10 +7,7 @@ class BackgroundMusic {
 
     // Create control UI
     this._createControls()
-
-    // Optional: auto play on user interaction
-    this._setupAutoPlay()
-  }
+}
 
   _setupAutoPlay() {
   const playAudio = () => {
