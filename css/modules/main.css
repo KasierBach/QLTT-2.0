@@ -1,0 +1,21 @@
+/*
+ * Main CSS Entry Point
+ * Imports all CSS modules in the correct order
+ */
+
+/* Original styles.css as legacy fallback (contains all remaining styles) */
+@import url('../../styles.css');
+
+/* Base styles, variables, and reset - will override legacy where applicable */
+@import url('./base.css');
+
+/* Layout components */
+@import url('./header.css');
+@import url('./hero.css');
+
+/* Feature components */
+@import url('./products.css');
+
+/* Existing utilities */
+@import url('./utilities.css');
+@import url('./order-tracking.css');

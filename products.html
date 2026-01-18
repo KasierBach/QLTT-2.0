@@ -7,14 +7,21 @@
     <title>Sản phẩm - TechStore</title>
     <link rel="icon" href="https://i.pinimg.com/originals/bc/56/f3/bc56f3856f7cc17e6c151f358d35acd0.jpg"
         type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/modules/main.css">
+    <link rel="stylesheet" href="css/modules/utilities.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+    <!-- OOP module CSS for tracking -->
+    <link rel="stylesheet" href="css/modules/order-tracking.css" />
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Bỏ qua đến nội dung</a>
+    <div id="main-content" tabindex="-1"></div>
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -41,6 +48,9 @@
 
                     <div class="theme-toggle" onclick="toggleTheme()">
                         <i class="fas fa-moon" id="theme-icon"></i>
+                    </div>
+                    <div class="music-toggle" onclick="toggleMusicControls()" title="Nhạc nền">
+                        <i class="fas fa-music"></i>
                     </div>
 
                     <div class="wishlist-icon" onclick="toggleWishlist()">
@@ -404,6 +414,23 @@
         </div>
     </div>
 
+    <!-- Quick Help Modal -->
+    <div class="modal" id="help-modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeHelpModal()">&times;</span>
+            <div style="padding: 1.5rem;">
+                <h3>Phím tắt nhanh</h3>
+                <ul style="margin-top: 1rem; line-height: 1.8;">
+                    <li><strong>/</strong> – Focus vào ô tìm kiếm</li>
+                    <li><strong>g h</strong> – Đi tới Trang chủ</li>
+                    <li><strong>g p</strong> – Đi tới Trang sản phẩm</li>
+                    <li><strong>t</strong> – Cuộn lên đầu trang</li>
+                    <li><strong>?</strong> – Mở trợ giúp nhanh</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- Chat Support -->
     <div class="chat-support" id="chat-support">
         <div class="chat-toggle" onclick="toggleChat()">
@@ -439,7 +466,14 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="script.js"></script>
+    <!-- Core OOP Utils (debounce, formatPrice, formatDate) -->
+    <script src="js/modules/core/Utils.js"></script>
+    <script src="js/modules/core/ThemeService.js"></script>
+    <script src="js/modules/core/UIGlobals.js"></script>
+    <script src="js/modules/core/HelpModal.js"></script>
+    <script src="js/modules/core/LoadingService.js"></script>
+    <script src="js/modules/core/MusicControls.js"></script>
+    <script src="js/modules/core/App.js"></script>
     <script src="products.js"></script>
     <script src="background-music.js"></script>
     <script>
@@ -447,6 +481,29 @@
             volume: 0.3,
             loop: true,
         })
+    </script>
+    <!-- OOP CartService façade (delegates to existing script.js functions) -->
+    <script src="js/modules/cart/CartService.js"></script>
+    <!-- OOP WishlistService façade (delegates to existing script.js functions) -->
+    <script src="js/modules/wishlist/WishlistService.js"></script>
+    <!-- OOP CompareService façade (delegates to existing script.js functions) -->
+    <script src="js/modules/compare/CompareService.js"></script>
+    <!-- OOP Modules -->
+    <script src="js/modules/NotificationService.js"></script>
+    <script src="js/modules/OrderTracking.js"></script>
+    <script src="js/modules/KeyboardShortcuts.js"></script>
+    <!-- OOP ProductList implementation -->
+    <script src="js/modules/products/ProductList.js"></script>
+    <!-- OOP ProductDetail implementation -->
+    <script src="js/modules/products/ProductDetail.js"></script>
+    <!-- OOP Auth/User implementation -->
+    <script src="js/modules/user/AuthService.js"></script>
+    <!-- OOP Checkout implementation -->
+    <script src="js/modules/checkout/CheckoutService.js"></script>
+    <!-- OOP Chat façade -->
+    <script src="js/modules/chat/ChatService.js"></script>
+    <script>
+        try { window.App?.installAllGlobals?.(); } catch (_) { }
     </script>
 </body>
 

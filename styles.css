@@ -195,7 +195,8 @@ body {
 
 .theme-toggle,
 .cart-icon,
-.wishlist-icon {
+.wishlist-icon,
+.music-toggle {
   position: relative;
   cursor: pointer;
   padding: 0.75rem;
@@ -206,7 +207,8 @@ body {
 
 .theme-toggle:hover,
 .cart-icon:hover,
-.wishlist-icon:hover {
+.wishlist-icon:hover,
+.music-toggle:hover {
   background-color: var(--surface-color);
   transform: scale(1.1);
 }
@@ -1290,6 +1292,16 @@ body {
 .auth-form {
   padding: 2rem;
 }
+/* Ensure space for leading icon in Auth inputs (login/register) */
+.auth-form .form-group input {
+  padding-left: 3rem !important; /* keep text clear of the left icon */
+}
+/* Keep padding on all states so it doesn't collapse when valid/invalid */
+.auth-form .form-group input:focus,
+.auth-form .form-group input:invalid,
+.auth-form .form-group input:valid {
+  padding-left: 3rem !important;
+}
 
 .auth-form h2 {
   text-align: center;
@@ -1336,9 +1348,9 @@ body {
   opacity: 0.7;
 }
 
-/* Ensure text doesn't overlap with icon */
-.form-group input:not(:placeholder-shown) {
-  padding-left: 1rem;
+/* Ensure text doesn't overlap with icon (Auth forms keep left space for the icon) */
+.auth-form .form-group input:not(:placeholder-shown) {
+  padding-left: 3rem;
 }
 
 .auth-btn {
@@ -2871,9 +2883,9 @@ body {
   color: var(--text-primary);
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.checkout-form .form-group input,
+.checkout-form .form-group select,
+.checkout-form .form-group textarea {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid var(--border-color);
@@ -2884,9 +2896,9 @@ body {
   color: var(--text-primary);
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.checkout-form .form-group input:focus,
+.checkout-form .form-group select:focus,
+.checkout-form .form-group textarea:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }

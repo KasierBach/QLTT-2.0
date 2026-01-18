@@ -1,0 +1,224 @@
+/* Order Tracking Module CSS (modular, scoped) */
+/* This file enhances the tracking modal to be larger and more readable.
+   Safe to include alongside existing styles.css.
+*/
+
+:root {
+  --ot-border: var(--border-color, #e5e7eb);
+  --ot-surface: var(--surface-color, #f8fafc);
+  --ot-bg: var(--bg-color, #ffffff);
+  --ot-text: var(--text-primary, #1f2937);
+  --ot-subtext: var(--text-secondary, #6b7280);
+  --ot-primary: var(--primary-color, #2563eb);
+}
+
+/* Modal container (already exists globally). Keep larger sizing here too for redundancy */
+.order-tracking-modal-content {
+  max-width: 1000px !important; /* slightly wider than default 900px */
+  width: 95% !important;
+  max-height: 92vh !important;
+  overflow-y: auto;
+  background: var(--ot-bg);
+  border: 1px solid var(--ot-border);
+}
+
+/* Inner content wrapper */
+.order-tracking-modal {
+  padding: 0.5rem 0.75rem 1rem 0.75rem;
+}
+
+/* Title */
+.order-tracking-modal h3 {
+  margin: 0 0 0.75rem 0;
+  color: var(--ot-text);
+  font-weight: 800;
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+/* Toolbar above map */
+.route-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.route-toolbar .map-btn,
+.route-toolbar button {
+  padding: 0.5rem 0.9rem;
+  background: var(--ot-surface);
+  color: var(--ot-text);
+  border: 1px solid var(--ot-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.route-toolbar .map-btn:hover,
+.route-toolbar button:hover {
+  background: var(--ot-primary);
+  color: #fff;
+  border-color: var(--ot-primary);
+  transform: translateY(-1px);
+}
+
+/* Map container (scoped selector prevents affecting other maps) */
+.order-tracking-modal #delivery-map {
+  height: 520px; /* taller than previous 480px for better view */
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--ot-border);
+  overflow: hidden;
+}
+
+/* Leaflet routing panel - make it cleaner and more readable */
+.order-tracking-modal .leaflet-routing-container {
+  background: var(--ot-bg);
+  border: 1px solid var(--ot-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,0.1));
+  max-height: 280px;      /* keep it compact but scrollable */
+  overflow-y: auto;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+/* Status section */
+.tracking-status-section {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--ot-surface);
+  border-radius: 8px;
+  border: 1px solid var(--ot-border);
+}
+
+.tracking-status-section h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--ot-text);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.tracking-status-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tracking-status-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--ot-border);
+  border-radius: 8px;
+  background: var(--ot-bg);
+  color: var(--ot-subtext);
+  user-select: none;
+}
+
+.tracking-status-option.active {
+  border-color: var(--ot-primary);
+  color: var(--ot-primary);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.tracking-status-option input {
+  pointer-events: none;
+}
+
+/* Delivery info */
+.delivery-info {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: var(--ot-bg);
+  border: 1px solid var(--ot-border);
+  border-radius: 8px;
+}
+
+.delivery-info h4 {
+  margin: 0.5rem 0;
+  color: var(--ot-text);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.delivery-person {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.delivery-avatar {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--ot-primary);
+}
+
+.delivery-details p {
+  margin: 0.2rem 0;
+  color: var(--ot-text);
+  font-size: 0.95rem;
+}
+
+.delivery-route {
+  list-style: decimal inside;
+  padding-left: 0.5rem;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.delivery-route li {
+  color: var(--ot-subtext);
+  margin: 0.15rem 0;
+}
+
+/* Close button area (reuses existing .close-tracking-btn if present) */
+.close-tracking-btn {
+  display: block;
+  margin: 0.75rem auto 0 auto;
+  padding: 0.6rem 1.2rem;
+  background: var(--ot-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.close-tracking-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .order-tracking-modal #delivery-map {
+    height: 460px;
+  }
+  .order-tracking-modal-content {
+    max-width: 95% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .order-tracking-modal #delivery-map {
+    height: 420px;
+  }
+  .route-toolbar {
+    justify-content: center;
+  }
+  .delivery-person {
+    flex-direction: column;
+    text-align: center;
+  }
+}

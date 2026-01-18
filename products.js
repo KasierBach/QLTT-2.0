@@ -584,4 +584,4 @@ const coupons = {
   SAVE50K: { discount: 50000, minOrder: 2000000, description: "Giảm 50K cho đơn hàng từ 2 triệu" },
   NEWUSER: { discount: 0.15, minOrder: 500000, description: "Giảm 15% cho khách hàng mới" },
   FLASH20: { discount: 0.2, minOrder: 3000000, description: "Flash sale - Giảm 20%" },
-}
+} 

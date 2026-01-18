@@ -7,7 +7,7 @@
     <title>Tin tức công nghệ - TechStore</title>
     <link rel="icon" href="https://i.pinimg.com/originals/bc/56/f3/bc56f3856f7cc17e6c151f358d35acd0.jpg"
         type="image/x-icon" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/modules/main.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
@@ -206,13 +206,19 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/modules/core/ThemeService.js"></script>
+    <script src="js/modules/core/UIGlobals.js"></script>
+    <script src="js/modules/core/HelpModal.js"></script>
+    <script src="js/modules/core/App.js"></script>
     <script src="background-music.js"></script>
     <script>
         const bgMusic = new BackgroundMusic('https://www.bensound.com/bensound-music/bensound-sunny.mp3', {
             volume: 0.3,
             loop: true,
         })
+    </script>
+    <script>
+        try { window.App?.installAllGlobals?.(); } catch (_) { }
     </script>
 </body>
 
